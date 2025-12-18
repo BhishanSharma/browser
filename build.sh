@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
+# build.sh - Linux/macOS build script
 set -euo pipefail
 
-CXX=g++
-CXXFLAGS="-std=c++20 -Wall -Wextra -Werror"
-LIBS=$(pkg-config --cflags --libs gtk4 webkitgtk-6.0)
+echo "Building for Linux/macOS..."
 
+# Create build directory
 mkdir -p build
+cd build
 
-$CXX $CXXFLAGS \
-  src/main.cpp \
-  src/browser_window.cpp \
-  src/browser_tab.cpp \
-  $LIBS \
-  -o build/browser
+# Configure with CMake
+cmake ..
 
-echo "Build complete. Run './build/browser' to start the application."
+# Build
+cmake --build . -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
+
+echo ""
+echo "Build complete!"
+echo "Run './build/browser' to start the application."
