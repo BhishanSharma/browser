@@ -1,7 +1,7 @@
 // ============================================================================
 // browser_toolbar.cpp
 // ============================================================================
-#include "browser_toolbar.hpp"
+#include "ui/browser_toolbar.hpp"
 #include "../core/browser_window.hpp"
 
 GtkWidget* BrowserToolbar::create(BrowserWindow* browser, GtkWidget** url_entry_out) {

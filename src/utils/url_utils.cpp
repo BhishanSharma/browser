@@ -1,7 +1,7 @@
 // ============================================================================
 // url_utils.cpp
 // ============================================================================
-#include "url_utils.hpp"
+#include "utils/url_utils.hpp"
 #include <glib.h>
 
 std::string UrlUtils::normalize_url(const std::string& input) {
