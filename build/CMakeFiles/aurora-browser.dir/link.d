@@ -3,11 +3,11 @@ aurora-browser: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
   CMakeFiles/aurora-browser.dir/src/main.cpp.o \
-  CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o \
-  CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o \
-  CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o \
-  CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o \
-  CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgtk-4.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpangocairo-1.0.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpango-1.0.so \
@@ -209,15 +209,15 @@ aurora-browser: \
 
 CMakeFiles/aurora-browser.dir/src/main.cpp.o:
 
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o:
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o:
 
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o:
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o:
 
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o:
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o:
 
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o:
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o:
 
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o:
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgtk-4.so:
 

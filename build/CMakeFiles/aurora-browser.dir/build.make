@@ -86,94 +86,94 @@ CMakeFiles/aurora-browser.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/main.cpp -o CMakeFiles/aurora-browser.dir/src/main.cpp.s
 
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o: /home/bhishan/projects/browser/src/browser_window.cpp
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o -MF CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o -c /home/bhishan/projects/browser/src/browser_window.cpp
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: /home/bhishan/projects/browser/src/core/browser_window.cpp
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o -MF CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o -c /home/bhishan/projects/browser/src/core/browser_window.cpp
 
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/browser_window.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/browser_window.cpp > CMakeFiles/aurora-browser.dir/src/browser_window.cpp.i
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/core/browser_window.cpp > CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.i
 
-CMakeFiles/aurora-browser.dir/src/browser_window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/browser_window.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/browser_window.cpp -o CMakeFiles/aurora-browser.dir/src/browser_window.cpp.s
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/core/browser_window.cpp -o CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.s
 
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o: /home/bhishan/projects/browser/src/browser_tab.cpp
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o -MF CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o -c /home/bhishan/projects/browser/src/browser_tab.cpp
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: /home/bhishan/projects/browser/src/core/browser_tab.cpp
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o -MF CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o -c /home/bhishan/projects/browser/src/core/browser_tab.cpp
 
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/browser_tab.cpp > CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.i
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/core/browser_tab.cpp > CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.i
 
-CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/browser_tab.cpp -o CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.s
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/core/browser_tab.cpp -o CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.s
 
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: /home/bhishan/projects/browser/src/browser_toolbar.cpp
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o -MF CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o -c /home/bhishan/projects/browser/src/browser_toolbar.cpp
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o: /home/bhishan/projects/browser/src/ui/browser_toolbar.cpp
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o -MF CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o -c /home/bhishan/projects/browser/src/ui/browser_toolbar.cpp
 
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/browser_toolbar.cpp > CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.i
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/ui/browser_toolbar.cpp > CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.i
 
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/browser_toolbar.cpp -o CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.s
+CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/ui/browser_toolbar.cpp -o CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.s
 
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: /home/bhishan/projects/browser/src/browser_tab_label.cpp
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o -MF CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o -c /home/bhishan/projects/browser/src/browser_tab_label.cpp
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o: /home/bhishan/projects/browser/src/ui/browser_tab_label.cpp
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o -MF CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o -c /home/bhishan/projects/browser/src/ui/browser_tab_label.cpp
 
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/browser_tab_label.cpp > CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.i
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/ui/browser_tab_label.cpp > CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.i
 
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/browser_tab_label.cpp -o CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.s
+CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/ui/browser_tab_label.cpp -o CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.s
 
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o: /home/bhishan/projects/browser/src/url_utils.cpp
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o -MF CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o -c /home/bhishan/projects/browser/src/url_utils.cpp
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o: CMakeFiles/aurora-browser.dir/flags.make
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o: /home/bhishan/projects/browser/src/utils/url_utils.cpp
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o: CMakeFiles/aurora-browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o -MF CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o.d -o CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o -c /home/bhishan/projects/browser/src/utils/url_utils.cpp
 
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/url_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/url_utils.cpp > CMakeFiles/aurora-browser.dir/src/url_utils.cpp.i
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bhishan/projects/browser/src/utils/url_utils.cpp > CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.i
 
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/url_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/url_utils.cpp -o CMakeFiles/aurora-browser.dir/src/url_utils.cpp.s
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/utils/url_utils.cpp -o CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.s
 
 # Object files for target aurora-browser
 aurora__browser_OBJECTS = \
 "CMakeFiles/aurora-browser.dir/src/main.cpp.o" \
-"CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o" \
-"CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o" \
-"CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o" \
-"CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o" \
-"CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o"
+"CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o" \
+"CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o" \
+"CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o" \
+"CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o" \
+"CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o"
 
 # External object files for target aurora-browser
 aurora__browser_EXTERNAL_OBJECTS =
 
 aurora-browser: CMakeFiles/aurora-browser.dir/src/main.cpp.o
-aurora-browser: CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o
-aurora-browser: CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o
-aurora-browser: CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o
-aurora-browser: CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o
-aurora-browser: CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o
+aurora-browser: CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o
+aurora-browser: CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o
+aurora-browser: CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o
+aurora-browser: CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o
+aurora-browser: CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o
 aurora-browser: CMakeFiles/aurora-browser.dir/build.make
 aurora-browser: CMakeFiles/aurora-browser.dir/compiler_depend.ts
 aurora-browser: CMakeFiles/aurora-browser.dir/link.txt

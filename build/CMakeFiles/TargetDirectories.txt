@@ -1,4 +1,5 @@
 /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir
+/home/bhishan/projects/browser/build/CMakeFiles/run.dir
 /home/bhishan/projects/browser/build/CMakeFiles/edit_cache.dir
 /home/bhishan/projects/browser/build/CMakeFiles/rebuild_cache.dir
 /home/bhishan/projects/browser/build/CMakeFiles/list_install_components.dir

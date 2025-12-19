@@ -1,9 +1,8 @@
-
 // ============================================================================
 // browser_toolbar.cpp
 // ============================================================================
 #include "browser_toolbar.hpp"
-#include "browser_window.hpp"
+#include "../core/browser_window.hpp"
 
 GtkWidget* BrowserToolbar::create(BrowserWindow* browser, GtkWidget** url_entry_out) {
     GtkWidget* toolbar = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);

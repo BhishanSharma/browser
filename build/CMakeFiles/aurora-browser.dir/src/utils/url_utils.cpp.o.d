@@ -1,7 +1,7 @@
-CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o: \
- /home/bhishan/projects/browser/src/url_utils.cpp \
+CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o: \
+ /home/bhishan/projects/browser/src/utils/url_utils.cpp \
  /usr/include/stdc-predef.h \
- /home/bhishan/projects/browser/src/url_utils.hpp \
+ /home/bhishan/projects/browser/src/utils/url_utils.hpp \
  /usr/include/c++/14/string /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \

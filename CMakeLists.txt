@@ -12,8 +12,10 @@ add_compile_options(-Wall -Wextra -Werror)
 # Debug/Release flags
 if(CMAKE_BUILD_TYPE MATCHES Debug)
     add_compile_options(-g -O0)
+    message(STATUS "Debug build - optimizations disabled")
 else()
     add_compile_options(-O3)
+    message(STATUS "Release build - optimizations enabled")
 endif()
 
 # Find required packages
@@ -21,20 +23,37 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK4 REQUIRED gtk4)
 pkg_check_modules(WEBKIT REQUIRED webkitgtk-6.0)
 
-# Source files
-set(SOURCES
+# Source files organized by category
+set(CORE_SOURCES
+    src/core/browser_window.cpp
+    src/core/browser_tab.cpp
+)
+
+set(UI_SOURCES
+    src/ui/browser_toolbar.cpp
+    src/ui/browser_tab_label.cpp
+)
+
+set(UTILS_SOURCES
+    src/utils/url_utils.cpp
+)
+
+set(MAIN_SOURCE
     src/main.cpp
-    src/browser_window.cpp
-    src/browser_tab.cpp
-    src/browser_toolbar.cpp
-    src/browser_tab_label.cpp
-    src/url_utils.cpp
+)
+
+# Combine all sources
+set(ALL_SOURCES
+    ${MAIN_SOURCE}
+    ${CORE_SOURCES}
+    ${UI_SOURCES}
+    ${UTILS_SOURCES}
 )
 
 # Create executable
-add_executable(aurora-browser ${SOURCES})
+add_executable(aurora-browser ${ALL_SOURCES})
 
-# Include directories
+# Include directories (so #include "core/browser_window.hpp" works)
 target_include_directories(aurora-browser PRIVATE
     ${GTK4_INCLUDE_DIRS}
     ${WEBKIT_INCLUDE_DIRS}
@@ -53,22 +72,35 @@ target_link_directories(aurora-browser PRIVATE
     ${WEBKIT_LIBRARY_DIRS}
 )
 
-# Compile options (not definitions)
+# Compile options
 target_compile_options(aurora-browser PRIVATE
     ${GTK4_CFLAGS_OTHER}
     ${WEBKIT_CFLAGS_OTHER}
 )
 
-# Install target (optional)
+# Install target
 install(TARGETS aurora-browser DESTINATION bin)
+
+# Create a 'run' target for convenience
+add_custom_target(run
+    COMMAND aurora-browser
+    DEPENDS aurora-browser
+    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+    COMMENT "Running Aurora Browser..."
+)
 
 # Print configuration info
 message(STATUS "=========================================")
-message(STATUS "Aurora Browser Configuration")
+message(STATUS "Aurora Browser Build Configuration")
 message(STATUS "=========================================")
+message(STATUS "Version: ${PROJECT_VERSION}")
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 message(STATUS "C++ compiler: ${CMAKE_CXX_COMPILER}")
 message(STATUS "C++ standard: C++${CMAKE_CXX_STANDARD}")
 message(STATUS "GTK4 version: ${GTK4_VERSION}")
 message(STATUS "WebKitGTK version: ${WEBKIT_VERSION}")
+message(STATUS "Source files: ${CMAKE_CURRENT_LIST_DIR}/src/")
+message(STATUS "  - Core: ${CORE_SOURCES}")
+message(STATUS "  - UI: ${UI_SOURCES}")
+message(STATUS "  - Utils: ${UTILS_SOURCES}")
 message(STATUS "=========================================")

@@ -2,10 +2,10 @@
 // browser_window.cpp - Now much cleaner!
 // ============================================================================
 #include "browser_window.hpp"
-#include "browser_styles.hpp"
-#include "browser_toolbar.hpp"
-#include "browser_tab_label.hpp"
-#include "url_utils.hpp"
+#include "../styles/browser_styles.hpp"
+#include "../ui/browser_toolbar.hpp"
+#include "../ui/browser_tab_label.hpp"
+#include "../utils/url_utils.hpp"
 #include <stdexcept>
 
 BrowserWindow::BrowserWindow() {

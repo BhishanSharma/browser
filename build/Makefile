@@ -174,101 +174,66 @@ aurora-browser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/build
 .PHONY : aurora-browser/fast
 
-src/browser_tab.o: src/browser_tab.cpp.o
-.PHONY : src/browser_tab.o
+#=============================================================================
+# Target rules for targets named run
+
+# Build rule for target.
+run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
+.PHONY : run
+
+# fast build rule for target.
+run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
+
+src/core/browser_tab.o: src/core/browser_tab.cpp.o
+.PHONY : src/core/browser_tab.o
 
 # target to build an object file
-src/browser_tab.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.o
-.PHONY : src/browser_tab.cpp.o
+src/core/browser_tab.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o
+.PHONY : src/core/browser_tab.cpp.o
 
-src/browser_tab.i: src/browser_tab.cpp.i
-.PHONY : src/browser_tab.i
+src/core/browser_tab.i: src/core/browser_tab.cpp.i
+.PHONY : src/core/browser_tab.i
 
 # target to preprocess a source file
-src/browser_tab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.i
-.PHONY : src/browser_tab.cpp.i
+src/core/browser_tab.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.i
+.PHONY : src/core/browser_tab.cpp.i
 
-src/browser_tab.s: src/browser_tab.cpp.s
-.PHONY : src/browser_tab.s
+src/core/browser_tab.s: src/core/browser_tab.cpp.s
+.PHONY : src/core/browser_tab.s
 
 # target to generate assembly for a file
-src/browser_tab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab.cpp.s
-.PHONY : src/browser_tab.cpp.s
+src/core/browser_tab.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.s
+.PHONY : src/core/browser_tab.cpp.s
 
-src/browser_tab_label.o: src/browser_tab_label.cpp.o
-.PHONY : src/browser_tab_label.o
+src/core/browser_window.o: src/core/browser_window.cpp.o
+.PHONY : src/core/browser_window.o
 
 # target to build an object file
-src/browser_tab_label.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o
-.PHONY : src/browser_tab_label.cpp.o
+src/core/browser_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o
+.PHONY : src/core/browser_window.cpp.o
 
-src/browser_tab_label.i: src/browser_tab_label.cpp.i
-.PHONY : src/browser_tab_label.i
-
-# target to preprocess a source file
-src/browser_tab_label.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.i
-.PHONY : src/browser_tab_label.cpp.i
-
-src/browser_tab_label.s: src/browser_tab_label.cpp.s
-.PHONY : src/browser_tab_label.s
-
-# target to generate assembly for a file
-src/browser_tab_label.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.s
-.PHONY : src/browser_tab_label.cpp.s
-
-src/browser_toolbar.o: src/browser_toolbar.cpp.o
-.PHONY : src/browser_toolbar.o
-
-# target to build an object file
-src/browser_toolbar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o
-.PHONY : src/browser_toolbar.cpp.o
-
-src/browser_toolbar.i: src/browser_toolbar.cpp.i
-.PHONY : src/browser_toolbar.i
+src/core/browser_window.i: src/core/browser_window.cpp.i
+.PHONY : src/core/browser_window.i
 
 # target to preprocess a source file
-src/browser_toolbar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.i
-.PHONY : src/browser_toolbar.cpp.i
+src/core/browser_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.i
+.PHONY : src/core/browser_window.cpp.i
 
-src/browser_toolbar.s: src/browser_toolbar.cpp.s
-.PHONY : src/browser_toolbar.s
-
-# target to generate assembly for a file
-src/browser_toolbar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.s
-.PHONY : src/browser_toolbar.cpp.s
-
-src/browser_window.o: src/browser_window.cpp.o
-.PHONY : src/browser_window.o
-
-# target to build an object file
-src/browser_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_window.cpp.o
-.PHONY : src/browser_window.cpp.o
-
-src/browser_window.i: src/browser_window.cpp.i
-.PHONY : src/browser_window.i
-
-# target to preprocess a source file
-src/browser_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_window.cpp.i
-.PHONY : src/browser_window.cpp.i
-
-src/browser_window.s: src/browser_window.cpp.s
-.PHONY : src/browser_window.s
+src/core/browser_window.s: src/core/browser_window.cpp.s
+.PHONY : src/core/browser_window.s
 
 # target to generate assembly for a file
-src/browser_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/browser_window.cpp.s
-.PHONY : src/browser_window.cpp.s
+src/core/browser_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.s
+.PHONY : src/core/browser_window.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -294,29 +259,77 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/url_utils.o: src/url_utils.cpp.o
-.PHONY : src/url_utils.o
+src/ui/browser_tab_label.o: src/ui/browser_tab_label.cpp.o
+.PHONY : src/ui/browser_tab_label.o
 
 # target to build an object file
-src/url_utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/url_utils.cpp.o
-.PHONY : src/url_utils.cpp.o
+src/ui/browser_tab_label.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o
+.PHONY : src/ui/browser_tab_label.cpp.o
 
-src/url_utils.i: src/url_utils.cpp.i
-.PHONY : src/url_utils.i
+src/ui/browser_tab_label.i: src/ui/browser_tab_label.cpp.i
+.PHONY : src/ui/browser_tab_label.i
 
 # target to preprocess a source file
-src/url_utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/url_utils.cpp.i
-.PHONY : src/url_utils.cpp.i
+src/ui/browser_tab_label.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.i
+.PHONY : src/ui/browser_tab_label.cpp.i
 
-src/url_utils.s: src/url_utils.cpp.s
-.PHONY : src/url_utils.s
+src/ui/browser_tab_label.s: src/ui/browser_tab_label.cpp.s
+.PHONY : src/ui/browser_tab_label.s
 
 # target to generate assembly for a file
-src/url_utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/url_utils.cpp.s
-.PHONY : src/url_utils.cpp.s
+src/ui/browser_tab_label.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.s
+.PHONY : src/ui/browser_tab_label.cpp.s
+
+src/ui/browser_toolbar.o: src/ui/browser_toolbar.cpp.o
+.PHONY : src/ui/browser_toolbar.o
+
+# target to build an object file
+src/ui/browser_toolbar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o
+.PHONY : src/ui/browser_toolbar.cpp.o
+
+src/ui/browser_toolbar.i: src/ui/browser_toolbar.cpp.i
+.PHONY : src/ui/browser_toolbar.i
+
+# target to preprocess a source file
+src/ui/browser_toolbar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.i
+.PHONY : src/ui/browser_toolbar.cpp.i
+
+src/ui/browser_toolbar.s: src/ui/browser_toolbar.cpp.s
+.PHONY : src/ui/browser_toolbar.s
+
+# target to generate assembly for a file
+src/ui/browser_toolbar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.s
+.PHONY : src/ui/browser_toolbar.cpp.s
+
+src/utils/url_utils.o: src/utils/url_utils.cpp.o
+.PHONY : src/utils/url_utils.o
+
+# target to build an object file
+src/utils/url_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o
+.PHONY : src/utils/url_utils.cpp.o
+
+src/utils/url_utils.i: src/utils/url_utils.cpp.i
+.PHONY : src/utils/url_utils.i
+
+# target to preprocess a source file
+src/utils/url_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.i
+.PHONY : src/utils/url_utils.cpp.i
+
+src/utils/url_utils.s: src/utils/url_utils.cpp.s
+.PHONY : src/utils/url_utils.s
+
+# target to generate assembly for a file
+src/utils/url_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.s
+.PHONY : src/utils/url_utils.cpp.s
 
 # Help Target
 help:
@@ -330,25 +343,26 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... run"
 	@echo "... aurora-browser"
-	@echo "... src/browser_tab.o"
-	@echo "... src/browser_tab.i"
-	@echo "... src/browser_tab.s"
-	@echo "... src/browser_tab_label.o"
-	@echo "... src/browser_tab_label.i"
-	@echo "... src/browser_tab_label.s"
-	@echo "... src/browser_toolbar.o"
-	@echo "... src/browser_toolbar.i"
-	@echo "... src/browser_toolbar.s"
-	@echo "... src/browser_window.o"
-	@echo "... src/browser_window.i"
-	@echo "... src/browser_window.s"
+	@echo "... src/core/browser_tab.o"
+	@echo "... src/core/browser_tab.i"
+	@echo "... src/core/browser_tab.s"
+	@echo "... src/core/browser_window.o"
+	@echo "... src/core/browser_window.i"
+	@echo "... src/core/browser_window.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/url_utils.o"
-	@echo "... src/url_utils.i"
-	@echo "... src/url_utils.s"
+	@echo "... src/ui/browser_tab_label.o"
+	@echo "... src/ui/browser_tab_label.i"
+	@echo "... src/ui/browser_tab_label.s"
+	@echo "... src/ui/browser_toolbar.o"
+	@echo "... src/ui/browser_toolbar.i"
+	@echo "... src/ui/browser_toolbar.s"
+	@echo "... src/utils/url_utils.o"
+	@echo "... src/utils/url_utils.i"
+	@echo "... src/utils/url_utils.s"
 .PHONY : help
 
 

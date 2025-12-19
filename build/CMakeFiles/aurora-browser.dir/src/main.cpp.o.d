@@ -1,6 +1,6 @@
 CMakeFiles/aurora-browser.dir/src/main.cpp.o: \
  /home/bhishan/projects/browser/src/main.cpp /usr/include/stdc-predef.h \
- /home/bhishan/projects/browser/src/browser_window.hpp \
+ /home/bhishan/projects/browser/src/core/browser_window.hpp \
  /usr/include/gtk-4.0/gtk/gtk.h /usr/include/gtk-4.0/gtk/css/gtkcss.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
@@ -1080,6 +1080,6 @@ CMakeFiles/aurora-browser.dir/src/main.cpp.o: \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
- /home/bhishan/projects/browser/src/browser_tab.hpp \
+ /home/bhishan/projects/browser/src/core/browser_tab.hpp \
  /usr/include/c++/14/iostream /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc

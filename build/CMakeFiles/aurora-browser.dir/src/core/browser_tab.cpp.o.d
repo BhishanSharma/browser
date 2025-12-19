@@ -1,10 +1,12 @@
-CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
- /home/bhishan/projects/browser/src/browser_tab_label.cpp \
+CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: \
+ /home/bhishan/projects/browser/src/core/browser_tab.cpp \
  /usr/include/stdc-predef.h \
- /home/bhishan/projects/browser/src/browser_tab_label.hpp \
- /usr/include/gtk-4.0/gtk/gtk.h /usr/include/gtk-4.0/gtk/css/gtkcss.h \
- /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
- /usr/include/glib-2.0/glib/gtypes.h \
+ /home/bhishan/projects/browser/src/core/browser_tab.hpp \
+ /usr/include/webkitgtk-6.0/webkit/webkit.h \
+ /usr/include/webkitgtk-6.0/webkit/WebKitApplicationInfo.h \
+ /usr/include/glib-2.0/glib-object.h \
+ /usr/include/glib-2.0/gobject/gbinding.h /usr/include/glib-2.0/glib.h \
+ /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
@@ -196,12 +198,6 @@ CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/glib-2.0/glib/glib-autocleanups.h \
- /usr/include/gtk-4.0/gdk/version/gdkversionmacros.h \
- /usr/include/gtk-4.0/gdk/version/gdk-visibility.h \
- /usr/include/gtk-4.0/gtk/css/gtkcssenums.h \
- /usr/include/gtk-4.0/gtk/css/gtkcssenumtypes.h \
- /usr/include/glib-2.0/glib-object.h \
- /usr/include/glib-2.0/gobject/gbinding.h \
  /usr/include/glib-2.0/gobject/gobject.h \
  /usr/include/glib-2.0/gobject/gtype.h \
  /usr/include/glib-2.0/gobject/gobject-visibility.h \
@@ -223,9 +219,9 @@ CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
  /usr/include/glib-2.0/gobject/gvaluearray.h \
  /usr/include/glib-2.0/gobject/gvaluetypes.h \
  /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
- /usr/include/gtk-4.0/gtk/css/gtkcsserror.h \
- /usr/include/gtk-4.0/gtk/css/gtkcsslocation.h \
- /usr/include/gtk-4.0/gtk/css/gtkcsssection.h \
+ /usr/include/webkitgtk-6.0/webkit/WebKitDefines.h \
+ /usr/include/webkitgtk-6.0/webkit/WebKitAuthenticationRequest.h \
+ /usr/include/webkitgtk-6.0/webkit/WebKitCredential.h \
  /usr/include/glib-2.0/gio/gio.h /usr/include/glib-2.0/gio/giotypes.h \
  /usr/include/glib-2.0/gio/gioenums.h \
  /usr/include/glib-2.0/gio/gio-visibility.h \
@@ -382,6 +378,15 @@ CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
  /usr/include/glib-2.0/gio/gzlibcompressor.h \
  /usr/include/glib-2.0/gio/gzlibdecompressor.h \
  /usr/include/glib-2.0/gio/gio-autocleanups.h \
+ /usr/include/webkitgtk-6.0/webkit/WebKitSecurityOrigin.h \
+ /usr/include/gtk-4.0/gtk/gtk.h /usr/include/gtk-4.0/gtk/css/gtkcss.h \
+ /usr/include/gtk-4.0/gdk/version/gdkversionmacros.h \
+ /usr/include/gtk-4.0/gdk/version/gdk-visibility.h \
+ /usr/include/gtk-4.0/gtk/css/gtkcssenums.h \
+ /usr/include/gtk-4.0/gtk/css/gtkcssenumtypes.h \
+ /usr/include/gtk-4.0/gtk/css/gtkcsserror.h \
+ /usr/include/gtk-4.0/gtk/css/gtkcsslocation.h \
+ /usr/include/gtk-4.0/gtk/css/gtkcsssection.h \
  /usr/include/gtk-4.0/gdk/gdk.h \
  /usr/include/gtk-4.0/gdk/gdkapplaunchcontext.h \
  /usr/include/gtk-4.0/gdk/gdktypes.h /usr/include/cairo/cairo.h \
@@ -865,102 +870,6 @@ CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
  /usr/include/gtk-4.0/gtk/gtkwindowcontrols.h \
  /usr/include/gtk-4.0/gtk/gtkwindowgroup.h \
  /usr/include/gtk-4.0/gtk/gtkwindowhandle.h \
- /home/bhishan/projects/browser/src/browser_window.hpp \
- /usr/include/c++/14/vector /usr/include/c++/14/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
- /usr/include/c++/14/bits/new_allocator.h \
- /usr/include/c++/14/bits/memoryfwd.h \
- /usr/include/c++/14/bits/stl_uninitialized.h \
- /usr/include/c++/14/ext/alloc_traits.h \
- /usr/include/c++/14/bits/alloc_traits.h \
- /usr/include/c++/14/bits/stl_vector.h \
- /usr/include/c++/14/initializer_list \
- /usr/include/c++/14/bits/stl_bvector.h \
- /usr/include/c++/14/bits/functional_hash.h \
- /usr/include/c++/14/bits/hash_bytes.h /usr/include/c++/14/bits/refwrap.h \
- /usr/include/c++/14/bits/invoke.h \
- /usr/include/c++/14/bits/stl_function.h \
- /usr/include/c++/14/backward/binders.h \
- /usr/include/c++/14/bits/range_access.h \
- /usr/include/c++/14/bits/vector.tcc \
- /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
- /usr/include/c++/14/bits/uses_allocator.h \
- /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/bits/ranges_util.h \
- /usr/include/c++/14/bits/ranges_base.h \
- /usr/include/c++/14/bits/max_size_type.h /usr/include/c++/14/numbers \
- /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
- /usr/include/c++/14/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/ostream /usr/include/c++/14/ios \
- /usr/include/c++/14/iosfwd /usr/include/c++/14/bits/stringfwd.h \
- /usr/include/c++/14/bits/postypes.h /usr/include/c++/14/cwchar \
- /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
- /usr/include/c++/14/exception /usr/include/c++/14/bits/exception_ptr.h \
- /usr/include/c++/14/bits/cxxabi_init_exception.h \
- /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/nested_exception.h \
- /usr/include/c++/14/bits/char_traits.h \
- /usr/include/c++/14/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
- /usr/include/c++/14/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/cctype \
- /usr/include/ctype.h /usr/include/c++/14/bits/ios_base.h \
- /usr/include/c++/14/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
- /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/14/bits/locale_classes.h /usr/include/c++/14/string \
- /usr/include/c++/14/bits/ostream_insert.h \
- /usr/include/c++/14/bits/cxxabi_forced.h \
- /usr/include/c++/14/bits/basic_string.h /usr/include/c++/14/string_view \
- /usr/include/c++/14/bits/string_view.tcc \
- /usr/include/c++/14/ext/string_conversions.h /usr/include/c++/14/cstdio \
- /usr/include/c++/14/cerrno /usr/include/c++/14/bits/charconv.h \
- /usr/include/c++/14/bits/basic_string.tcc \
- /usr/include/c++/14/bits/locale_classes.tcc \
- /usr/include/c++/14/system_error \
- /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
- /usr/include/c++/14/stdexcept /usr/include/c++/14/streambuf \
- /usr/include/c++/14/bits/streambuf.tcc \
- /usr/include/c++/14/bits/basic_ios.h \
- /usr/include/c++/14/bits/locale_facets.h /usr/include/c++/14/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
- /usr/include/c++/14/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h \
- /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc \
- /usr/include/c++/14/bits/ostream.tcc \
- /usr/include/c++/14/bits/shared_ptr.h \
- /usr/include/c++/14/bits/shared_ptr_base.h \
- /usr/include/c++/14/bits/allocated_ptr.h \
- /usr/include/c++/14/ext/aligned_buffer.h \
- /usr/include/c++/14/ext/concurrence.h \
- /usr/include/c++/14/bits/shared_ptr_atomic.h \
- /usr/include/c++/14/bits/atomic_base.h \
- /usr/include/c++/14/bits/atomic_lockfree_defines.h \
- /usr/include/c++/14/bits/atomic_wait.h /usr/include/c++/14/cstdint \
- /usr/include/c++/14/climits /usr/include/syscall.h \
- /usr/include/x86_64-linux-gnu/sys/syscall.h \
- /usr/include/x86_64-linux-gnu/asm/unistd.h \
- /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /usr/include/c++/14/bits/std_mutex.h \
- /usr/include/c++/14/backward/auto_ptr.h \
- /usr/include/c++/14/bits/ranges_uninitialized.h \
- /usr/include/c++/14/bits/ranges_algobase.h \
- /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h \
- /usr/include/webkitgtk-6.0/webkit/webkit.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitApplicationInfo.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitDefines.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitAuthenticationRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitCredential.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitSecurityOrigin.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutomationSession.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitBackForwardList.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitBackForwardListItem.h \
@@ -1082,4 +991,45 @@ CMakeFiles/aurora-browser.dir/src/browser_tab_label.cpp.o: \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
- /home/bhishan/projects/browser/src/browser_tab.hpp
+ /usr/include/c++/14/stdexcept /usr/include/c++/14/exception \
+ /usr/include/c++/14/bits/exception_ptr.h \
+ /usr/include/c++/14/bits/cxxabi_init_exception.h \
+ /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/hash_bytes.h \
+ /usr/include/c++/14/bits/nested_exception.h /usr/include/c++/14/string \
+ /usr/include/c++/14/bits/stringfwd.h \
+ /usr/include/c++/14/bits/memoryfwd.h \
+ /usr/include/c++/14/bits/char_traits.h \
+ /usr/include/c++/14/bits/postypes.h /usr/include/c++/14/cwchar \
+ /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+ /usr/include/c++/14/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+ /usr/include/c++/14/bits/new_allocator.h \
+ /usr/include/c++/14/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+ /usr/include/c++/14/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/iosfwd \
+ /usr/include/c++/14/cctype /usr/include/ctype.h \
+ /usr/include/c++/14/bits/ostream_insert.h \
+ /usr/include/c++/14/bits/cxxabi_forced.h \
+ /usr/include/c++/14/bits/stl_function.h \
+ /usr/include/c++/14/backward/binders.h \
+ /usr/include/c++/14/bits/refwrap.h /usr/include/c++/14/bits/invoke.h \
+ /usr/include/c++/14/bits/range_access.h \
+ /usr/include/c++/14/initializer_list \
+ /usr/include/c++/14/bits/basic_string.h \
+ /usr/include/c++/14/ext/alloc_traits.h \
+ /usr/include/c++/14/bits/alloc_traits.h /usr/include/c++/14/string_view \
+ /usr/include/c++/14/bits/functional_hash.h \
+ /usr/include/c++/14/bits/ranges_base.h \
+ /usr/include/c++/14/bits/max_size_type.h /usr/include/c++/14/numbers \
+ /usr/include/c++/14/bits/string_view.tcc \
+ /usr/include/c++/14/ext/string_conversions.h /usr/include/c++/14/cstdio \
+ /usr/include/c++/14/cerrno /usr/include/c++/14/bits/charconv.h \
+ /usr/include/c++/14/bits/basic_string.tcc \
+ /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
+ /usr/include/c++/14/bits/uses_allocator.h \
+ /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
+ /usr/include/c++/14/bits/ranges_util.h

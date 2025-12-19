@@ -1,7 +1,7 @@
-CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: \
- /home/bhishan/projects/browser/src/browser_toolbar.cpp \
+CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: \
+ /home/bhishan/projects/browser/src/core/browser_window.cpp \
  /usr/include/stdc-predef.h \
- /home/bhishan/projects/browser/src/browser_toolbar.hpp \
+ /home/bhishan/projects/browser/src/core/browser_window.hpp \
  /usr/include/gtk-4.0/gtk/gtk.h /usr/include/gtk-4.0/gtk/css/gtkcss.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
@@ -864,9 +864,8 @@ CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: \
  /usr/include/gtk-4.0/gtk/gtkwidgetpaintable.h \
  /usr/include/gtk-4.0/gtk/gtkwindowcontrols.h \
  /usr/include/gtk-4.0/gtk/gtkwindowgroup.h \
- /usr/include/gtk-4.0/gtk/gtkwindowhandle.h \
- /home/bhishan/projects/browser/src/browser_window.hpp \
- /usr/include/c++/14/vector /usr/include/c++/14/bits/allocator.h \
+ /usr/include/gtk-4.0/gtk/gtkwindowhandle.h /usr/include/c++/14/vector \
+ /usr/include/c++/14/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
  /usr/include/c++/14/bits/new_allocator.h \
  /usr/include/c++/14/bits/memoryfwd.h \
@@ -1082,4 +1081,8 @@ CMakeFiles/aurora-browser.dir/src/browser_toolbar.cpp.o: \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
- /home/bhishan/projects/browser/src/browser_tab.hpp
+ /home/bhishan/projects/browser/src/core/browser_tab.hpp \
+ /home/bhishan/projects/browser/src/core/../styles/browser_styles.hpp \
+ /home/bhishan/projects/browser/src/core/../ui/browser_toolbar.hpp \
+ /home/bhishan/projects/browser/src/core/../ui/browser_tab_label.hpp \
+ /home/bhishan/projects/browser/src/core/../utils/url_utils.hpp
