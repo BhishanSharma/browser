@@ -36,18 +36,28 @@ A lightweight, cross-platform web browser built with C++20, GTK4, and WebKitGTK.
 
 ## Installation
 
-### Linux (Ubuntu/Debian)
+### Pre-built Binaries (Recommended)
+
+Download the latest release for your platform from the [Releases](https://github.com/yourusername/browser/releases) page:
+- **Linux:** `browser-linux-x64.tar.gz`
+- **Windows:** `browser-windows-x64.zip`
+
+All releases are automatically built and tested by GitHub Actions.
+
+### Building from Source
+
+#### Linux (Ubuntu/Debian)
 
 1. **Install dependencies:**
    ```bash
    sudo apt update
-   sudo apt install build-essential cmake pkg-config \
+   sudo apt install build-essential pkg-config \
                     libgtk-4-dev libwebkitgtk-6.0-dev
    ```
 
 2. **Clone and build:**
    ```bash
-   git clone https://github.com/BhishanSharma/browser.git
+   git clone https://github.com/yourusername/browser.git
    cd browser
    chmod +x build.sh
    ./build.sh
@@ -60,50 +70,36 @@ A lightweight, cross-platform web browser built with C++20, GTK4, and WebKitGTK.
 
 ### Windows
 
-#### Using vcpkg (Recommended)
+**Recommended:** Download pre-built Windows executables from the [Releases](https://github.com/yourusername/browser/releases) page.
 
-1. **Install vcpkg:**
-   ```powershell
-   git clone https://github.com/Microsoft/vcpkg.git
-   cd vcpkg
-   .\bootstrap-vcpkg.bat
-   .\vcpkg integrate install
+Releases are automatically built by GitHub Actions whenever code is pushed or a new release is created.
+
+#### Building from Source (Windows)
+
+If you want to build locally on Windows:
+
+1. **Install MSYS2:** Download from https://www.msys2.org/
+
+2. **Open MSYS2 MinGW 64-bit terminal and install dependencies:**
+   ```bash
+   pacman -Syu
+   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk4 \
+             mingw-w64-x86_64-webkitgtk6 mingw-w64-x86_64-pkg-config
    ```
 
-2. **Install dependencies:**
-   ```powershell
-   .\vcpkg install gtk4:x64-windows webkitgtk:x64-windows
-   ```
-
-3. **Clone and build:**
-   ```powershell
-   git clone https://github.com/BhishanSharma/browser.git
-   cd browser
-   mkdir build
-   cd build
-   cmake .. -DCMAKE_TOOLCHAIN_FILE=[vcpkg root]\scripts\buildsystems\vcpkg.cmake
-   cmake --build . --config Release
+3. **Build:**
+   ```bash
+   mkdir -p build
+   g++ -std=c++20 -Wall -Wextra -O2 \
+       src/main.cpp src/browser_window.cpp src/browser_tab.cpp \
+       $(pkg-config --cflags --libs gtk4 webkitgtk-6.0) \
+       -o build/browser.exe
    ```
 
 4. **Run:**
-   ```powershell
-   .\Release\browser.exe
+   ```bash
+   ./build/browser.exe
    ```
-
-#### Alternative: Create build.bat
-
-Create a file named `build.bat`:
-```batch
-@echo off
-mkdir build
-cd build
-cmake .. -G "Visual Studio 17 2022" -A x64
-cmake --build . --config Release
-cd ..
-echo Build complete! Run "build\Release\browser.exe"
-```
-
-Then run: `build.bat`
 
 ### macOS
 
@@ -114,7 +110,7 @@ Then run: `build.bat`
 
 2. **Clone and build:**
    ```bash
-   git clone https://github.com/BhishanSharma/browser.git
+   git clone https://github.com/yourusername/browser.git
    cd browser
    chmod +x build.sh
    ./build.sh
@@ -129,6 +125,9 @@ Then run: `build.bat`
 
 ```
 browser/
+├── .github/
+│   └── workflows/
+│       └── build.yml          # GitHub Actions CI/CD
 ├── src/
 │   ├── main.cpp              # Application entry point
 │   ├── browser_window.cpp    # Main window implementation
@@ -136,10 +135,8 @@ browser/
 │   ├── browser_tab.cpp       # Tab management
 │   └── browser_tab.h         # Tab header
 ├── build/                    # Build output (generated)
-├── CMakeLists.txt           # CMake configuration
-├── build.sh                 # Linux/macOS build script
-├── build.bat                # Windows build script
-└── README.md                # This file
+├── build.sh                  # Linux build script
+└── README.md                 # This file
 ```
 
 ## Usage
@@ -163,28 +160,38 @@ browser/
 
 ### Configuration Options
 
-You can customize the build with CMake options:
+The build.sh script handles all configuration automatically. For custom builds:
 
 ```bash
 # Debug build
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+g++ -std=c++20 -g -O0 \
+    src/main.cpp src/browser_window.cpp src/browser_tab.cpp \
+    $(pkg-config --cflags --libs gtk4 webkitgtk-6.0) \
+    -o build/browser
 
-# Release build with optimizations
-cmake -DCMAKE_BUILD_TYPE=Release ..
-
-# Specify installation prefix
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+# Release build with optimizations (default)
+g++ -std=c++20 -O2 \
+    src/main.cpp src/browser_window.cpp src/browser_tab.cpp \
+    $(pkg-config --cflags --libs gtk4 webkitgtk-6.0) \
+    -o build/browser
 ```
 
 ### Clean Build
 
 ```bash
 rm -rf build
-mkdir build
-cd build
-cmake ..
-cmake --build .
+./build.sh
 ```
+
+### Continuous Integration
+
+This project uses GitHub Actions for automated builds. On every push:
+- ✅ Linux executable is built and tested
+- ✅ Windows executable is built with MSYS2
+- ✅ Artifacts are uploaded for download
+- ✅ Releases are automatically created with binaries
+
+See `.github/workflows/build.yml` for the full CI/CD pipeline.
 
 ## Troubleshooting
 
@@ -258,13 +265,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you encounter any issues or have questions:
-- Open an issue on [GitHub Issues](https://github.com/BhishanSharma/browser/issues)
+- Open an issue on [GitHub Issues](https://github.com/yourusername/browser/issues)
 - Check existing issues for solutions
 - Provide detailed information about your system and the problem
 
 ## Authors
 
-* **Your Name** - *Bhishan Sharma*
+* **Your Name** - *Initial work*
 
 ## Version History
 
