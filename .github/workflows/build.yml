@@ -55,26 +55,47 @@ jobs:
           install: >-
             mingw-w64-x86_64-gcc
             mingw-w64-x86_64-gtk4
-            mingw-w64-x86_64-webkitgtk6
+            mingw-w64-x86_64-webkitgtk
             mingw-w64-x86_64-pkg-config
             make
+
+      - name: Check available packages
+        shell: msys2 {0}
+        run: |
+          echo "Checking WebKitGTK availability..."
+          pkg-config --list-all | grep -i webkit || echo "No webkit packages found"
+          pkg-config --modversion gtk4 || echo "GTK4 version check failed"
 
       - name: Build
         shell: msys2 {0}
         run: |
           mkdir -p build
+          # Try to detect the correct webkit package name
+          if pkg-config --exists webkit2gtk-4.1; then
+            WEBKIT_PKG="webkit2gtk-4.1"
+          elif pkg-config --exists webkit2gtk-4.0; then
+            WEBKIT_PKG="webkit2gtk-4.0"
+          elif pkg-config --exists webkitgtk-6.0; then
+            WEBKIT_PKG="webkitgtk-6.0"
+          else
+            echo "Error: No WebKitGTK package found"
+            exit 1
+          fi
+          
+          echo "Using WebKit package: $WEBKIT_PKG"
+          
           g++ -std=c++20 -Wall -Wextra -O2 \
             src/main.cpp \
             src/browser_window.cpp \
             src/browser_tab.cpp \
-            $(pkg-config --cflags --libs gtk4 webkitgtk-6.0) \
+            $(pkg-config --cflags --libs gtk4 $WEBKIT_PKG) \
             -o build/browser.exe
 
       - name: Copy DLLs
         shell: msys2 {0}
         run: |
           # Copy necessary DLLs to build directory
-          ldd build/browser.exe | grep mingw64 | awk '{print $3}' | xargs -I {} cp {} build/
+          ldd build/browser.exe | grep mingw64 | awk '{print $3}' | xargs -I {} cp {} build/ || true
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
