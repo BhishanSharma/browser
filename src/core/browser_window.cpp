@@ -1,13 +1,13 @@
 // ============================================================================
 // browser_window.cpp - Now much cleaner!
 // ============================================================================
-#include "browser_window.hpp"
+#include "core/browser_window.hpp"
+#include "core/browser_config.hpp"
 #include "../styles/browser_styles.hpp"
 #include "../ui/browser_toolbar.hpp"
 #include "../ui/browser_tab_label.hpp"
 #include "../utils/url_utils.hpp"
 #include <stdexcept>
-#include "core/browser_config.hpp"
 
 BrowserWindow::BrowserWindow()
 {

@@ -1,7 +1,7 @@
 // ============================================================================
 // browser_tab_label.cpp
 // ============================================================================
-#include "browser_tab_label.hpp"
+#include "ui/browser_tab_label.hpp"
 #include "../core/browser_window.hpp"
 
 GtkWidget* BrowserTabLabel::create(int /*page_num*/, void* user_data) {

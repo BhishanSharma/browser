@@ -1082,8 +1082,8 @@ CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.o: \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
  /home/bhishan/projects/browser/src/core/browser_tab.hpp \
+ /home/bhishan/projects/browser/src/core/browser_config.hpp \
  /home/bhishan/projects/browser/src/core/../styles/browser_styles.hpp \
  /home/bhishan/projects/browser/src/core/../ui/browser_toolbar.hpp \
  /home/bhishan/projects/browser/src/core/../ui/browser_tab_label.hpp \
- /home/bhishan/projects/browser/src/core/../utils/url_utils.hpp \
- /home/bhishan/projects/browser/src/core/browser_config.hpp
+ /home/bhishan/projects/browser/src/core/../utils/url_utils.hpp

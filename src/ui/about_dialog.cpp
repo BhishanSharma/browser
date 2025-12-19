@@ -51,7 +51,7 @@ void AboutDialog::show(GtkWindow* parent) {
     
     gtk_about_dialog_set_copyright(
         GTK_ABOUT_DIALOG(dialog),
-        "Copyright © 2024 Your Name"
+        "Copyright © 2025 Bhishan Sharma"
     );
     
     gtk_about_dialog_set_license_type(
