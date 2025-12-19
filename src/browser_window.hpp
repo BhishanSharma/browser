@@ -4,7 +4,6 @@
 #include <vector>
 #include <memory>
 #include <webkit/webkit.h>
-
 #include "browser_tab.hpp"
 
 class BrowserWindow
@@ -15,6 +14,14 @@ public:
 
     void run(int argc, char **argv);
 
+    // Make event handlers public so other modules can use them
+    static void on_new_tab(GtkButton *, gpointer user_data);
+    static void on_close_tab(GtkButton *button, gpointer user_data);
+    static void on_back(GtkButton *, gpointer user_data);
+    static void on_forward(GtkButton *, gpointer user_data);
+    static void on_reload(GtkButton *, gpointer user_data);
+    static void on_home(GtkButton *, gpointer user_data);
+
 private:
     GtkApplication *m_app;
     GtkWidget *m_window;
@@ -24,15 +31,11 @@ private:
     std::vector<std::unique_ptr<BrowserTab>> m_tabs;
 
     static void on_activate(GtkApplication *app, gpointer user_data);
-    static void on_new_tab(GtkButton *, gpointer user_data);
-    static void on_close_tab(GtkButton *button, gpointer user_data);
     static void on_url_activate(GtkEntry *, gpointer user_data);
-    static void on_back(GtkButton *, gpointer user_data);
-    static void on_forward(GtkButton *, gpointer user_data);
-    static void on_reload(GtkButton *, gpointer user_data);
-    static void on_home(GtkButton *, gpointer user_data);
 
     void create_ui();
+    void apply_styles();
+    void setup_download_handler();
     void add_tab();
     BrowserTab *current_tab();
     
