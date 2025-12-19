@@ -15,4 +15,4 @@ cmake --build . -j$(nproc)
 
 echo ""
 echo "✅ Build complete!"
-echo "Run: ./build/aurora-browser"
+echo "Run: ./build/genoma-browser"

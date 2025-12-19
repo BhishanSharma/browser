@@ -66,9 +66,9 @@ include CMakeFiles/run.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/run.dir/progress.make
 
-CMakeFiles/run: aurora-browser
+CMakeFiles/run: genoma-browser
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running Aurora Browser..."
-	./aurora-browser
+	./genoma-browser
 
 CMakeFiles/run.dir/codegen:
 .PHONY : CMakeFiles/run.dir/codegen

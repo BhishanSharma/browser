@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/bhishan/projects/browser/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/aurora-browser.dir/all
+all: CMakeFiles/genoma-browser.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/aurora-browser.dir/codegen
+codegen: CMakeFiles/genoma-browser.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,47 +75,47 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/aurora-browser.dir/clean
+clean: CMakeFiles/genoma-browser.dir/clean
 clean: CMakeFiles/run.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/aurora-browser.dir
+# Target rules for target CMakeFiles/genoma-browser.dir
 
 # All Build rule for target.
-CMakeFiles/aurora-browser.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target aurora-browser"
-.PHONY : CMakeFiles/aurora-browser.dir/all
+CMakeFiles/genoma-browser.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target genoma-browser"
+.PHONY : CMakeFiles/genoma-browser.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/aurora-browser.dir/rule: cmake_check_build_system
+CMakeFiles/genoma-browser.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aurora-browser.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/genoma-browser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 0
-.PHONY : CMakeFiles/aurora-browser.dir/rule
+.PHONY : CMakeFiles/genoma-browser.dir/rule
 
 # Convenience name for target.
-aurora-browser: CMakeFiles/aurora-browser.dir/rule
-.PHONY : aurora-browser
+genoma-browser: CMakeFiles/genoma-browser.dir/rule
+.PHONY : genoma-browser
 
 # codegen rule for target.
-CMakeFiles/aurora-browser.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target aurora-browser"
-.PHONY : CMakeFiles/aurora-browser.dir/codegen
+CMakeFiles/genoma-browser.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target genoma-browser"
+.PHONY : CMakeFiles/genoma-browser.dir/codegen
 
 # clean rule for target.
-CMakeFiles/aurora-browser.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/clean
-.PHONY : CMakeFiles/aurora-browser.dir/clean
+CMakeFiles/genoma-browser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/clean
+.PHONY : CMakeFiles/genoma-browser.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run.dir
 
 # All Build rule for target.
-CMakeFiles/run.dir/all: CMakeFiles/aurora-browser.dir/all
+CMakeFiles/run.dir/all: CMakeFiles/genoma-browser.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=9 "Built target run"
@@ -133,7 +133,7 @@ run: CMakeFiles/run.dir/rule
 .PHONY : run
 
 # codegen rule for target.
-CMakeFiles/run.dir/codegen: CMakeFiles/aurora-browser.dir/all
+CMakeFiles/run.dir/codegen: CMakeFiles/genoma-browser.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=9 "Finished codegen for target run"
 .PHONY : CMakeFiles/run.dir/codegen

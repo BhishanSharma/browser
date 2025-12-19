@@ -52,40 +52,40 @@ set(ALL_SOURCES
 )
 
 # Create executable
-add_executable(aurora-browser ${ALL_SOURCES})
+add_executable(genoma-browser ${ALL_SOURCES})
 
 # Include directories (so #include "core/browser_window.hpp" works)
-target_include_directories(aurora-browser PRIVATE
+target_include_directories(genoma-browser PRIVATE
     ${GTK4_INCLUDE_DIRS}
     ${WEBKIT_INCLUDE_DIRS}
     ${CMAKE_SOURCE_DIR}/src
 )
 
 # Link libraries
-target_link_libraries(aurora-browser PRIVATE
+target_link_libraries(genoma-browser PRIVATE
     ${GTK4_LIBRARIES}
     ${WEBKIT_LIBRARIES}
 )
 
 # Link directories
-target_link_directories(aurora-browser PRIVATE
+target_link_directories(genoma-browser PRIVATE
     ${GTK4_LIBRARY_DIRS}
     ${WEBKIT_LIBRARY_DIRS}
 )
 
 # Compile options
-target_compile_options(aurora-browser PRIVATE
+target_compile_options(genoma-browser PRIVATE
     ${GTK4_CFLAGS_OTHER}
     ${WEBKIT_CFLAGS_OTHER}
 )
 
 # Install target
-install(TARGETS aurora-browser DESTINATION bin)
+install(TARGETS genoma-browser DESTINATION bin)
 
 # Create a 'run' target for convenience
 add_custom_target(run
-    COMMAND aurora-browser
-    DEPENDS aurora-browser
+    COMMAND genoma-browser
+    DEPENDS genoma-browser
     WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
     COMMENT "Running Aurora Browser..."
 )

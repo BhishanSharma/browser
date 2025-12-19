@@ -30,7 +30,7 @@ void AboutDialog::show(GtkWindow* parent) {
     
     gtk_about_dialog_set_website(
         GTK_ABOUT_DIALOG(dialog),
-        "https://github.com/yourusername/aurora-browser"
+        "https://github.com/BhishanSharma/browser"
     );
     
     gtk_about_dialog_set_website_label(
@@ -44,7 +44,7 @@ void AboutDialog::show(GtkWindow* parent) {
     );
     
     const char* authors[] = {
-        "Your Name <your.email@example.com>",
+        "Bhishan Sharma <bhishan.bulder@gmail.com>",
         nullptr
     };
     gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(dialog), authors);

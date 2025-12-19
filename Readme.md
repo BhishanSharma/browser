@@ -21,7 +21,7 @@ browser/
 ├── build_cmake.sh          ← NEW
 ├── build.sh                (keep for simple builds)
 ├── build/                  (auto-generated)
-│   ├── aurora-browser      (executable)
+│   ├── genoma-browser      (executable)
 │   └── ... (cmake files)
 └── src/
     ├── main.cpp

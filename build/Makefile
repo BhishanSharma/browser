@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named aurora-browser
+# Target rules for targets named genoma-browser
 
 # Build rule for target.
-aurora-browser: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aurora-browser
-.PHONY : aurora-browser
+genoma-browser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 genoma-browser
+.PHONY : genoma-browser
 
 # fast build rule for target.
-aurora-browser/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/build
-.PHONY : aurora-browser/fast
+genoma-browser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/build
+.PHONY : genoma-browser/fast
 
 #=============================================================================
 # Target rules for targets named run
@@ -192,7 +192,7 @@ src/core/browser_tab.o: src/core/browser_tab.cpp.o
 
 # target to build an object file
 src/core/browser_tab.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_tab.cpp.o
 .PHONY : src/core/browser_tab.cpp.o
 
 src/core/browser_tab.i: src/core/browser_tab.cpp.i
@@ -200,7 +200,7 @@ src/core/browser_tab.i: src/core/browser_tab.cpp.i
 
 # target to preprocess a source file
 src/core/browser_tab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_tab.cpp.i
 .PHONY : src/core/browser_tab.cpp.i
 
 src/core/browser_tab.s: src/core/browser_tab.cpp.s
@@ -208,7 +208,7 @@ src/core/browser_tab.s: src/core/browser_tab.cpp.s
 
 # target to generate assembly for a file
 src/core/browser_tab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_tab.cpp.s
 .PHONY : src/core/browser_tab.cpp.s
 
 src/core/browser_window.o: src/core/browser_window.cpp.o
@@ -216,7 +216,7 @@ src/core/browser_window.o: src/core/browser_window.cpp.o
 
 # target to build an object file
 src/core/browser_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.o
 .PHONY : src/core/browser_window.cpp.o
 
 src/core/browser_window.i: src/core/browser_window.cpp.i
@@ -224,7 +224,7 @@ src/core/browser_window.i: src/core/browser_window.cpp.i
 
 # target to preprocess a source file
 src/core/browser_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.i
 .PHONY : src/core/browser_window.cpp.i
 
 src/core/browser_window.s: src/core/browser_window.cpp.s
@@ -232,7 +232,7 @@ src/core/browser_window.s: src/core/browser_window.cpp.s
 
 # target to generate assembly for a file
 src/core/browser_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.s
 .PHONY : src/core/browser_window.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -240,7 +240,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -248,7 +248,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -256,7 +256,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/ui/about_dialog.o: src/ui/about_dialog.cpp.o
@@ -264,7 +264,7 @@ src/ui/about_dialog.o: src/ui/about_dialog.cpp.o
 
 # target to build an object file
 src/ui/about_dialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/about_dialog.cpp.o
 .PHONY : src/ui/about_dialog.cpp.o
 
 src/ui/about_dialog.i: src/ui/about_dialog.cpp.i
@@ -272,7 +272,7 @@ src/ui/about_dialog.i: src/ui/about_dialog.cpp.i
 
 # target to preprocess a source file
 src/ui/about_dialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/about_dialog.cpp.i
 .PHONY : src/ui/about_dialog.cpp.i
 
 src/ui/about_dialog.s: src/ui/about_dialog.cpp.s
@@ -280,7 +280,7 @@ src/ui/about_dialog.s: src/ui/about_dialog.cpp.s
 
 # target to generate assembly for a file
 src/ui/about_dialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/about_dialog.cpp.s
 .PHONY : src/ui/about_dialog.cpp.s
 
 src/ui/browser_tab_label.o: src/ui/browser_tab_label.cpp.o
@@ -288,7 +288,7 @@ src/ui/browser_tab_label.o: src/ui/browser_tab_label.cpp.o
 
 # target to build an object file
 src/ui/browser_tab_label.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_tab_label.cpp.o
 .PHONY : src/ui/browser_tab_label.cpp.o
 
 src/ui/browser_tab_label.i: src/ui/browser_tab_label.cpp.i
@@ -296,7 +296,7 @@ src/ui/browser_tab_label.i: src/ui/browser_tab_label.cpp.i
 
 # target to preprocess a source file
 src/ui/browser_tab_label.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_tab_label.cpp.i
 .PHONY : src/ui/browser_tab_label.cpp.i
 
 src/ui/browser_tab_label.s: src/ui/browser_tab_label.cpp.s
@@ -304,7 +304,7 @@ src/ui/browser_tab_label.s: src/ui/browser_tab_label.cpp.s
 
 # target to generate assembly for a file
 src/ui/browser_tab_label.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_tab_label.cpp.s
 .PHONY : src/ui/browser_tab_label.cpp.s
 
 src/ui/browser_toolbar.o: src/ui/browser_toolbar.cpp.o
@@ -312,7 +312,7 @@ src/ui/browser_toolbar.o: src/ui/browser_toolbar.cpp.o
 
 # target to build an object file
 src/ui/browser_toolbar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_toolbar.cpp.o
 .PHONY : src/ui/browser_toolbar.cpp.o
 
 src/ui/browser_toolbar.i: src/ui/browser_toolbar.cpp.i
@@ -320,7 +320,7 @@ src/ui/browser_toolbar.i: src/ui/browser_toolbar.cpp.i
 
 # target to preprocess a source file
 src/ui/browser_toolbar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_toolbar.cpp.i
 .PHONY : src/ui/browser_toolbar.cpp.i
 
 src/ui/browser_toolbar.s: src/ui/browser_toolbar.cpp.s
@@ -328,7 +328,7 @@ src/ui/browser_toolbar.s: src/ui/browser_toolbar.cpp.s
 
 # target to generate assembly for a file
 src/ui/browser_toolbar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/ui/browser_toolbar.cpp.s
 .PHONY : src/ui/browser_toolbar.cpp.s
 
 src/utils/url_utils.o: src/utils/url_utils.cpp.o
@@ -336,7 +336,7 @@ src/utils/url_utils.o: src/utils/url_utils.cpp.o
 
 # target to build an object file
 src/utils/url_utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o
 .PHONY : src/utils/url_utils.cpp.o
 
 src/utils/url_utils.i: src/utils/url_utils.cpp.i
@@ -344,7 +344,7 @@ src/utils/url_utils.i: src/utils/url_utils.cpp.i
 
 # target to preprocess a source file
 src/utils/url_utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.i
 .PHONY : src/utils/url_utils.cpp.i
 
 src/utils/url_utils.s: src/utils/url_utils.cpp.s
@@ -352,7 +352,7 @@ src/utils/url_utils.s: src/utils/url_utils.cpp.s
 
 # target to generate assembly for a file
 src/utils/url_utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/genoma-browser.dir/build.make CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.s
 .PHONY : src/utils/url_utils.cpp.s
 
 # Help Target
@@ -368,7 +368,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... run"
-	@echo "... aurora-browser"
+	@echo "... genoma-browser"
 	@echo "... src/core/browser_tab.o"
 	@echo "... src/core/browser_tab.i"
 	@echo "... src/core/browser_tab.s"

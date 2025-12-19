@@ -171,7 +171,7 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bhishan/projects/browser/src/utils/url_utils.cpp -o CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.s
 
 # Object files for target genoma-browser
-aurora__browser_OBJECTS = \
+genoma__browser_OBJECTS = \
 "CMakeFiles/genoma-browser.dir/src/main.cpp.o" \
 "CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.o" \
 "CMakeFiles/genoma-browser.dir/src/core/browser_tab.cpp.o" \
@@ -181,7 +181,7 @@ aurora__browser_OBJECTS = \
 "CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o"
 
 # External object files for target genoma-browser
-aurora__browser_EXTERNAL_OBJECTS =
+genoma__browser_EXTERNAL_OBJECTS =
 
 genoma-browser: CMakeFiles/genoma-browser.dir/src/main.cpp.o
 genoma-browser: CMakeFiles/genoma-browser.dir/src/core/browser_window.cpp.o
