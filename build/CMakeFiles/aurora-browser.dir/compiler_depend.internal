@@ -7262,6 +7262,7 @@ aurora-browser
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/main.cpp.o
+ /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o
  /home/bhishan/projects/browser/build/CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o

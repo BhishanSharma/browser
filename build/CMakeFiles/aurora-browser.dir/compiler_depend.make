@@ -7254,10 +7254,13 @@ aurora-browser: /lib/x86_64-linux-gnu/libEGL.so.1 \
   CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o \
   CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o \
   CMakeFiles/aurora-browser.dir/src/main.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o \
   CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o \
   CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o \
   CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o
 
+
+CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o:
 
 CMakeFiles/aurora-browser.dir/src/main.cpp.o:
 
