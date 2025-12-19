@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bhishan/projects/browser/src/core/browser_tab.cpp" "CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o.d"
   "/home/bhishan/projects/browser/src/core/browser_window.cpp" "CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o.d"
   "/home/bhishan/projects/browser/src/main.cpp" "CMakeFiles/aurora-browser.dir/src/main.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/main.cpp.o.d"
+  "/home/bhishan/projects/browser/src/ui/about_dialog.cpp" "CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o.d"
   "/home/bhishan/projects/browser/src/ui/browser_tab_label.cpp" "CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o.d"
   "/home/bhishan/projects/browser/src/ui/browser_toolbar.cpp" "CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o.d"
   "/home/bhishan/projects/browser/src/utils/url_utils.cpp" "CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o" "gcc" "CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o.d"

@@ -86,12 +86,12 @@ clean: CMakeFiles/run.dir/clean
 CMakeFiles/aurora-browser.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target aurora-browser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target aurora-browser"
 .PHONY : CMakeFiles/aurora-browser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/aurora-browser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aurora-browser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 0
 .PHONY : CMakeFiles/aurora-browser.dir/rule
@@ -103,7 +103,7 @@ aurora-browser: CMakeFiles/aurora-browser.dir/rule
 # codegen rule for target.
 CMakeFiles/aurora-browser.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target aurora-browser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target aurora-browser"
 .PHONY : CMakeFiles/aurora-browser.dir/codegen
 
 # clean rule for target.
@@ -118,12 +118,12 @@ CMakeFiles/aurora-browser.dir/clean:
 CMakeFiles/run.dir/all: CMakeFiles/aurora-browser.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=8 "Built target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=9 "Built target run"
 .PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bhishan/projects/browser/build/CMakeFiles 0
 .PHONY : CMakeFiles/run.dir/rule
@@ -135,7 +135,7 @@ run: CMakeFiles/run.dir/rule
 # codegen rule for target.
 CMakeFiles/run.dir/codegen: CMakeFiles/aurora-browser.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=8 "Finished codegen for target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bhishan/projects/browser/build/CMakeFiles --progress-num=9 "Finished codegen for target run"
 .PHONY : CMakeFiles/run.dir/codegen
 
 # clean rule for target.

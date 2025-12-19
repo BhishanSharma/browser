@@ -259,6 +259,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ui/about_dialog.o: src/ui/about_dialog.cpp.o
+.PHONY : src/ui/about_dialog.o
+
+# target to build an object file
+src/ui/about_dialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o
+.PHONY : src/ui/about_dialog.cpp.o
+
+src/ui/about_dialog.i: src/ui/about_dialog.cpp.i
+.PHONY : src/ui/about_dialog.i
+
+# target to preprocess a source file
+src/ui/about_dialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.i
+.PHONY : src/ui/about_dialog.cpp.i
+
+src/ui/about_dialog.s: src/ui/about_dialog.cpp.s
+.PHONY : src/ui/about_dialog.s
+
+# target to generate assembly for a file
+src/ui/about_dialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aurora-browser.dir/build.make CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.s
+.PHONY : src/ui/about_dialog.cpp.s
+
 src/ui/browser_tab_label.o: src/ui/browser_tab_label.cpp.o
 .PHONY : src/ui/browser_tab_label.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/ui/about_dialog.o"
+	@echo "... src/ui/about_dialog.i"
+	@echo "... src/ui/about_dialog.s"
 	@echo "... src/ui/browser_tab_label.o"
 	@echo "... src/ui/browser_tab_label.i"
 	@echo "... src/ui/browser_tab_label.s"

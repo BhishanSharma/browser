@@ -1,7 +1,7 @@
-CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: \
- /home/bhishan/projects/browser/src/core/browser_window.cpp \
+CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o: \
+ /home/bhishan/projects/browser/src/ui/about_dialog.cpp \
  /usr/include/stdc-predef.h \
- /home/bhishan/projects/browser/src/core/browser_window.hpp \
+ /home/bhishan/projects/browser/src/ui/about_dialog.hpp \
  /usr/include/gtk-4.0/gtk/gtk.h /usr/include/gtk-4.0/gtk/css/gtkcss.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
@@ -864,226 +864,43 @@ CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o: \
  /usr/include/gtk-4.0/gtk/gtkwidgetpaintable.h \
  /usr/include/gtk-4.0/gtk/gtkwindowcontrols.h \
  /usr/include/gtk-4.0/gtk/gtkwindowgroup.h \
- /usr/include/gtk-4.0/gtk/gtkwindowhandle.h /usr/include/c++/14/vector \
- /usr/include/c++/14/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
- /usr/include/c++/14/bits/new_allocator.h \
+ /usr/include/gtk-4.0/gtk/gtkwindowhandle.h \
+ /home/bhishan/projects/browser/src/ui/../core/browser_config.hpp \
+ /usr/include/c++/14/string /usr/include/c++/14/bits/stringfwd.h \
  /usr/include/c++/14/bits/memoryfwd.h \
- /usr/include/c++/14/bits/stl_uninitialized.h \
- /usr/include/c++/14/ext/alloc_traits.h \
- /usr/include/c++/14/bits/alloc_traits.h \
- /usr/include/c++/14/bits/stl_vector.h \
- /usr/include/c++/14/initializer_list \
- /usr/include/c++/14/bits/stl_bvector.h \
- /usr/include/c++/14/bits/functional_hash.h \
- /usr/include/c++/14/bits/hash_bytes.h /usr/include/c++/14/bits/refwrap.h \
- /usr/include/c++/14/bits/invoke.h \
- /usr/include/c++/14/bits/stl_function.h \
- /usr/include/c++/14/backward/binders.h \
- /usr/include/c++/14/bits/range_access.h \
- /usr/include/c++/14/bits/vector.tcc \
- /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
- /usr/include/c++/14/bits/uses_allocator.h \
- /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/bits/ranges_util.h \
- /usr/include/c++/14/bits/ranges_base.h \
- /usr/include/c++/14/bits/max_size_type.h /usr/include/c++/14/numbers \
- /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
- /usr/include/c++/14/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/ostream /usr/include/c++/14/ios \
- /usr/include/c++/14/iosfwd /usr/include/c++/14/bits/stringfwd.h \
+ /usr/include/c++/14/bits/char_traits.h \
  /usr/include/c++/14/bits/postypes.h /usr/include/c++/14/cwchar \
  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
- /usr/include/c++/14/exception /usr/include/c++/14/bits/exception_ptr.h \
- /usr/include/c++/14/bits/cxxabi_init_exception.h \
- /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/nested_exception.h \
- /usr/include/c++/14/bits/char_traits.h \
+ /usr/include/c++/14/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+ /usr/include/c++/14/bits/new_allocator.h \
  /usr/include/c++/14/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
  /usr/include/c++/14/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/cctype \
- /usr/include/ctype.h /usr/include/c++/14/bits/ios_base.h \
- /usr/include/c++/14/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
- /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/14/bits/locale_classes.h /usr/include/c++/14/string \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/iosfwd \
+ /usr/include/c++/14/cctype /usr/include/ctype.h \
  /usr/include/c++/14/bits/ostream_insert.h \
  /usr/include/c++/14/bits/cxxabi_forced.h \
- /usr/include/c++/14/bits/basic_string.h /usr/include/c++/14/string_view \
+ /usr/include/c++/14/bits/stl_function.h \
+ /usr/include/c++/14/backward/binders.h \
+ /usr/include/c++/14/bits/refwrap.h /usr/include/c++/14/bits/invoke.h \
+ /usr/include/c++/14/bits/range_access.h \
+ /usr/include/c++/14/initializer_list \
+ /usr/include/c++/14/bits/basic_string.h \
+ /usr/include/c++/14/ext/alloc_traits.h \
+ /usr/include/c++/14/bits/alloc_traits.h /usr/include/c++/14/string_view \
+ /usr/include/c++/14/bits/functional_hash.h \
+ /usr/include/c++/14/bits/hash_bytes.h \
+ /usr/include/c++/14/bits/ranges_base.h \
+ /usr/include/c++/14/bits/max_size_type.h /usr/include/c++/14/numbers \
  /usr/include/c++/14/bits/string_view.tcc \
  /usr/include/c++/14/ext/string_conversions.h /usr/include/c++/14/cstdio \
  /usr/include/c++/14/cerrno /usr/include/c++/14/bits/charconv.h \
  /usr/include/c++/14/bits/basic_string.tcc \
- /usr/include/c++/14/bits/locale_classes.tcc \
- /usr/include/c++/14/system_error \
- /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
- /usr/include/c++/14/stdexcept /usr/include/c++/14/streambuf \
- /usr/include/c++/14/bits/streambuf.tcc \
- /usr/include/c++/14/bits/basic_ios.h \
- /usr/include/c++/14/bits/locale_facets.h /usr/include/c++/14/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
- /usr/include/c++/14/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h \
- /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc \
- /usr/include/c++/14/bits/ostream.tcc \
- /usr/include/c++/14/bits/shared_ptr.h \
- /usr/include/c++/14/bits/shared_ptr_base.h \
- /usr/include/c++/14/bits/allocated_ptr.h \
- /usr/include/c++/14/ext/aligned_buffer.h \
- /usr/include/c++/14/ext/concurrence.h \
- /usr/include/c++/14/bits/shared_ptr_atomic.h \
- /usr/include/c++/14/bits/atomic_base.h \
- /usr/include/c++/14/bits/atomic_lockfree_defines.h \
- /usr/include/c++/14/bits/atomic_wait.h /usr/include/c++/14/cstdint \
- /usr/include/c++/14/climits /usr/include/syscall.h \
- /usr/include/x86_64-linux-gnu/sys/syscall.h \
- /usr/include/x86_64-linux-gnu/asm/unistd.h \
- /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /usr/include/c++/14/bits/std_mutex.h \
- /usr/include/c++/14/backward/auto_ptr.h \
- /usr/include/c++/14/bits/ranges_uninitialized.h \
- /usr/include/c++/14/bits/ranges_algobase.h \
- /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h \
- /usr/include/webkitgtk-6.0/webkit/webkit.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitApplicationInfo.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitDefines.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitAuthenticationRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitCredential.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitSecurityOrigin.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitAutomationSession.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitBackForwardList.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitBackForwardListItem.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitClipboardPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitColorChooserRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitContextMenu.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitContextMenuActions.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitContextMenuItem.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitCookieManager.h \
- /usr/include/libsoup-3.0/libsoup/soup.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth.h \
- /usr/include/libsoup-3.0/libsoup/soup-types.h \
- /usr/include/libsoup-3.0/libsoup/soup-version.h \
- /usr/include/libsoup-3.0/libsoup/soup-status.h \
- /usr/include/libsoup-3.0/libsoup/soup-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-message.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-body.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-method.h \
- /usr/include/libsoup-3.0/libsoup/soup-multipart.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-manager.h \
- /usr/include/libsoup-3.0/libsoup/soup-cache.h \
- /usr/include/libsoup-3.0/libsoup/soup-content-decoder.h \
- /usr/include/libsoup-3.0/libsoup/soup-content-sniffer.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar-db.h \
- /usr/include/libsoup-3.0/libsoup/soup-cookie-jar-text.h \
- /usr/include/libsoup-3.0/libsoup/soup-date-utils.h \
- /usr/include/libsoup-3.0/libsoup/soup-enum-types.h \
- /usr/include/libsoup-3.0/libsoup/soup-form.h \
- /usr/include/libsoup-3.0/libsoup/soup-headers.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-enforcer.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-enforcer-db.h \
- /usr/include/libsoup-3.0/libsoup/soup-hsts-policy.h \
- /usr/include/libsoup-3.0/libsoup/soup-logger.h \
- /usr/include/libsoup-3.0/libsoup/soup-message-metrics.h \
- /usr/include/libsoup-3.0/libsoup/soup-multipart-input-stream.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain-basic.h \
- /usr/include/libsoup-3.0/libsoup/soup-auth-domain-digest.h \
- /usr/include/libsoup-3.0/libsoup/soup-server.h \
- /usr/include/libsoup-3.0/libsoup/soup-uri-utils.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-connection.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket.h \
- /usr/include/libsoup-3.0/libsoup/soup-server-message.h \
- /usr/include/libsoup-3.0/libsoup/soup-session.h \
- /usr/include/libsoup-3.0/libsoup/soup-session-feature.h \
- /usr/include/libsoup-3.0/libsoup/soup-tld.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension-deflate.h \
- /usr/include/libsoup-3.0/libsoup/soup-websocket-extension-manager.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitDeviceInfoPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitDownload.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitURIRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitURIResponse.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitEditingCommands.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitEditorState.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitEnumTypes.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitError.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitFaviconDatabase.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitFeature.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitFileChooserRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitFindController.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitFormSubmissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitGeolocationManager.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitGeolocationPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitHitTestResult.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitInputMethodContext.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitInstallMissingMediaPluginsPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitMediaKeySystemPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitMemoryPressureSettings.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNavigationAction.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNavigationPolicyDecision.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitPolicyDecision.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebsitePolicies.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNetworkProxySettings.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNetworkSession.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataManager.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteData.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNotification.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitNotificationPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitOptionMenu.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitOptionMenuItem.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitPermissionStateQuery.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitPointerLockPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitPrintOperation.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebView.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitScriptDialog.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitSettings.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitUserContentManager.h \
- /usr/include/webkitgtk-6.0/jsc/jsc.h \
- /usr/include/webkitgtk-6.0/jsc/JSCClass.h \
- /usr/include/webkitgtk-6.0/jsc/JSCDefines.h \
- /usr/include/webkitgtk-6.0/jsc/JSCValue.h \
- /usr/include/webkitgtk-6.0/jsc/JSCContext.h \
- /usr/include/webkitgtk-6.0/jsc/JSCException.h \
- /usr/include/webkitgtk-6.0/jsc/JSCVirtualMachine.h \
- /usr/include/webkitgtk-6.0/jsc/JSCOptions.h \
- /usr/include/webkitgtk-6.0/jsc/JSCVersion.h \
- /usr/include/webkitgtk-6.0/jsc/JSCWeakValue.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitUserContent.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitUserMessage.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebContext.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitSecurityManager.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitURISchemeRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitURISchemeResponse.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebResource.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebViewSessionState.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWindowProperties.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebInspector.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebViewBase.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitResponsePolicyDecision.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitURIUtilities.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitUserContentFilterStore.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitUserMediaPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitVersion.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
- /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
- /home/bhishan/projects/browser/src/core/browser_tab.hpp \
- /home/bhishan/projects/browser/src/core/../styles/browser_styles.hpp \
- /home/bhishan/projects/browser/src/core/../ui/browser_toolbar.hpp \
- /home/bhishan/projects/browser/src/core/../ui/browser_tab_label.hpp \
- /home/bhishan/projects/browser/src/core/../utils/url_utils.hpp \
- /home/bhishan/projects/browser/src/core/browser_config.hpp
+ /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
+ /usr/include/c++/14/bits/uses_allocator.h \
+ /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
+ /usr/include/c++/14/bits/ranges_util.h

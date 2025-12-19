@@ -7,6 +7,7 @@ aurora-browser: \
   CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o \
   CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o \
   CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o \
+  CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o \
   CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgtk-4.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpangocairo-1.0.so \
@@ -216,6 +217,8 @@ CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o:
 CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o:
 
 CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o:
+
+CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o:
 
 CMakeFiles/aurora-browser.dir/src/utils/url_utils.cpp.o:
 

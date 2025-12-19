@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/aurora-browser.dir/src/core/browser_window.cpp.o.d"
   "CMakeFiles/aurora-browser.dir/src/main.cpp.o"
   "CMakeFiles/aurora-browser.dir/src/main.cpp.o.d"
+  "CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o"
+  "CMakeFiles/aurora-browser.dir/src/ui/about_dialog.cpp.o.d"
   "CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o"
   "CMakeFiles/aurora-browser.dir/src/ui/browser_tab_label.cpp.o.d"
   "CMakeFiles/aurora-browser.dir/src/ui/browser_toolbar.cpp.o"

@@ -991,12 +991,8 @@ CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitWebsiteDataAccessPermissionRequest.h \
  /usr/include/webkitgtk-6.0/webkit/WebKitAutocleanups.h \
- /usr/include/c++/14/stdexcept /usr/include/c++/14/exception \
- /usr/include/c++/14/bits/exception_ptr.h \
- /usr/include/c++/14/bits/cxxabi_init_exception.h \
- /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/hash_bytes.h \
- /usr/include/c++/14/bits/nested_exception.h /usr/include/c++/14/string \
- /usr/include/c++/14/bits/stringfwd.h \
+ /home/bhishan/projects/browser/src/core/browser_config.hpp \
+ /usr/include/c++/14/string /usr/include/c++/14/bits/stringfwd.h \
  /usr/include/c++/14/bits/memoryfwd.h \
  /usr/include/c++/14/bits/char_traits.h \
  /usr/include/c++/14/bits/postypes.h /usr/include/c++/14/cwchar \
@@ -1023,6 +1019,7 @@ CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: \
  /usr/include/c++/14/ext/alloc_traits.h \
  /usr/include/c++/14/bits/alloc_traits.h /usr/include/c++/14/string_view \
  /usr/include/c++/14/bits/functional_hash.h \
+ /usr/include/c++/14/bits/hash_bytes.h \
  /usr/include/c++/14/bits/ranges_base.h \
  /usr/include/c++/14/bits/max_size_type.h /usr/include/c++/14/numbers \
  /usr/include/c++/14/bits/string_view.tcc \
@@ -1032,4 +1029,7 @@ CMakeFiles/aurora-browser.dir/src/core/browser_tab.cpp.o: \
  /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
  /usr/include/c++/14/bits/uses_allocator.h \
  /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/bits/ranges_util.h
+ /usr/include/c++/14/bits/ranges_util.h /usr/include/c++/14/stdexcept \
+ /usr/include/c++/14/exception /usr/include/c++/14/bits/exception_ptr.h \
+ /usr/include/c++/14/bits/cxxabi_init_exception.h \
+ /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/nested_exception.h

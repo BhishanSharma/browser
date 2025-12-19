@@ -32,6 +32,7 @@ set(CORE_SOURCES
 set(UI_SOURCES
     src/ui/browser_toolbar.cpp
     src/ui/browser_tab_label.cpp
+    src/ui/about_dialog.cpp
 )
 
 set(UTILS_SOURCES
