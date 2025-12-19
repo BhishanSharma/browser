@@ -17,22 +17,26 @@ rm -rf build  # Clean everything
 ## Updated Project Structure:
 ```
 browser/
-├── CMakeLists.txt          ← NEW
-├── build_cmake.sh          ← NEW
-├── build.sh                (keep for simple builds)
-├── build/                  (auto-generated)
-│   ├── genoma-browser      (executable)
-│   └── ... (cmake files)
+├── CMakeLists.txt
+├── build_cmake.sh
+├── build.sh
+├── README.md                    (add this!)
+├── .gitignore                   (add this!)
+├── build/                       (auto-generated)
 └── src/
     ├── main.cpp
-    ├── browser_window.hpp
-    ├── browser_window.cpp
-    ├── browser_tab.hpp
-    ├── browser_tab.cpp
-    ├── browser_styles.hpp
-    ├── browser_toolbar.hpp
-    ├── browser_toolbar.cpp
-    ├── browser_tab_label.hpp
-    ├── browser_tab_label.cpp
-    ├── url_utils.hpp
-    └── url_utils.cpp
+    ├── core/                    ← Core browser logic
+    │   ├── browser_window.hpp
+    │   ├── browser_window.cpp
+    │   ├── browser_tab.hpp
+    │   └── browser_tab.cpp
+    ├── ui/                      ← UI components
+    │   ├── browser_toolbar.hpp
+    │   ├── browser_toolbar.cpp
+    │   ├── browser_tab_label.hpp
+    │   └── browser_tab_label.cpp
+    ├── styles/                  ← Styling
+    │   └── browser_styles.hpp
+    └── utils/                   ← Utilities
+        ├── url_utils.hpp
+        └── url_utils.cpp
