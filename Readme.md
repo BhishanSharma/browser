@@ -7,7 +7,7 @@ sudo apt install -y \
 ```
 
 ```
-./build.sh
+./build_cmake.sh
 ./build/browser
 ```
 
