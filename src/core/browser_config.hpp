@@ -6,9 +6,9 @@
 
 namespace BrowserConfig {
     // Browser identity
-    inline constexpr const char* BROWSER_NAME = "Aurora Browser";
+    inline constexpr const char* BROWSER_NAME = "Genoma Browser";
     inline constexpr const char* BROWSER_VERSION = "0.1.0";
-    inline constexpr const char* BROWSER_CODENAME = "Aurora";
+    inline constexpr const char* BROWSER_CODENAME = "Genoma";
     
     // Build custom user agent string
     inline std::string get_user_agent() {
