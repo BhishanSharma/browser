@@ -16,10 +16,6 @@ GtkWidget* BrowserToolbar::create(BrowserWindow* browser, GtkWidget** url_entry_
     GtkWidget* url_bar = create_url_bar(url_entry_out);
     gtk_box_append(GTK_BOX(toolbar), url_bar);
 
-    // Add new tab button
-    GtkWidget* new_tab_btn = create_new_tab_button(browser);
-    gtk_box_append(GTK_BOX(toolbar), new_tab_btn);
-
     return toolbar;
 }
 
@@ -64,12 +60,4 @@ GtkWidget* BrowserToolbar::create_url_bar(GtkWidget** url_entry_out) {
 
     *url_entry_out = url_entry;
     return url_container;
-}
-
-GtkWidget* BrowserToolbar::create_new_tab_button(BrowserWindow* browser) {
-    GtkWidget* btn = gtk_button_new_with_label("+ New Tab");
-    gtk_widget_add_css_class(btn, "new-tab-button");
-    gtk_widget_set_tooltip_text(btn, "New Tab (Ctrl+T)");
-    g_signal_connect(btn, "clicked", G_CALLBACK(BrowserWindow::on_new_tab), browser);
-    return btn;
 }

@@ -1,5 +1,5 @@
 // ============================================================================
-// browser_window.cpp - Now much cleaner!
+// browser_window.cpp - Custom tab bar in header with toolbar below
 // ============================================================================
 #include "core/browser_window.hpp"
 #include "core/browser_config.hpp"
@@ -17,6 +17,7 @@ BrowserWindow::BrowserWindow()
         throw std::runtime_error("Failed to create GtkApplication");
     }
     g_signal_connect(m_app, "activate", G_CALLBACK(on_activate), this);
+    m_current_tab_index = 0;
 }
 
 BrowserWindow::~BrowserWindow()
@@ -40,47 +41,154 @@ void BrowserWindow::create_ui()
 {
     m_window = gtk_application_window_new(m_app);
 
-    // Use config constants
     gtk_window_set_default_size(
         GTK_WINDOW(m_window),
         BrowserConfig::DEFAULT_WINDOW_WIDTH,
         BrowserConfig::DEFAULT_WINDOW_HEIGHT);
 
-    // Set window title with version
-    std::string title = std::string(BrowserConfig::BROWSER_NAME) +
-                        " v" + BrowserConfig::BROWSER_VERSION;
-    gtk_window_set_title(GTK_WINDOW(m_window), title.c_str());
+    // std::string title = std::string(BrowserConfig::BROWSER_NAME) +
+    //                     " v" + BrowserConfig::BROWSER_VERSION;
+    // gtk_window_set_title(GTK_WINDOW(m_window), title.c_str());
 
-    // Apply styles
     apply_styles();
 
-    // Create layout
+    // Create header bar with tabs
+    GtkWidget *header = gtk_header_bar_new();
+    gtk_header_bar_set_show_title_buttons(GTK_HEADER_BAR(header), TRUE);
+    
+    // Create custom tab bar
+    create_tab_bar();
+    
+    // Pack tab bar to start and let it expand across the header (like colspan)
+    gtk_header_bar_pack_start(GTK_HEADER_BAR(header), m_tab_bar);
+    
+    // Remove default title to give full space to tabs
+    gtk_header_bar_set_title_widget(GTK_HEADER_BAR(header), NULL);
+    
+    gtk_window_set_titlebar(GTK_WINDOW(m_window), header);
+
+    // Create main vertical layout
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     gtk_window_set_child(GTK_WINDOW(m_window), vbox);
 
-    // Create toolbar
+    // Create toolbar below header
     GtkWidget *toolbar = BrowserToolbar::create(this, &m_url_entry);
     g_signal_connect(m_url_entry, "activate", G_CALLBACK(on_url_activate), this);
     gtk_box_append(GTK_BOX(vbox), toolbar);
 
-    // Create notebook
-    m_notebook = gtk_notebook_new();
-    gtk_notebook_set_scrollable(GTK_NOTEBOOK(m_notebook), TRUE);
-    gtk_notebook_set_show_border(GTK_NOTEBOOK(m_notebook), FALSE);
-    gtk_widget_set_vexpand(m_notebook, TRUE);
-    gtk_box_append(GTK_BOX(vbox), m_notebook);
+    // Create content stack for tab contents
+    m_content_stack = gtk_stack_new();
+    gtk_widget_set_vexpand(m_content_stack, TRUE);
+    gtk_box_append(GTK_BOX(vbox), m_content_stack);
 
-    // Setup download handling
     setup_download_handler();
 
     // Add initial tab
     add_tab();
 }
 
+void BrowserWindow::create_tab_bar()
+{
+    // Main tab bar container
+    m_tab_bar = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    gtk_widget_add_css_class(m_tab_bar, "tab-bar");
+    gtk_widget_set_hexpand(m_tab_bar, TRUE);  // This makes it expand like colspan
+
+    // Scrolled window for tabs
+    GtkWidget *scrolled = gtk_scrolled_window_new();
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled),
+                                   GTK_POLICY_AUTOMATIC,
+                                   GTK_POLICY_NEVER);
+    gtk_widget_set_hexpand(scrolled, TRUE);  // Allow scrolled window to expand
+    gtk_widget_set_margin_start(scrolled, 0);
+    gtk_widget_set_margin_end(scrolled, 0);
+
+    // Container for tab buttons
+    m_tab_list = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    gtk_widget_set_margin_start(m_tab_list, 0);
+    gtk_widget_set_margin_end(m_tab_list, 0);
+    gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scrolled), m_tab_list);
+
+    gtk_box_append(GTK_BOX(m_tab_bar), scrolled);
+
+    // New tab button at the end
+    GtkWidget *new_tab_btn = gtk_button_new_from_icon_name("list-add-symbolic");
+    gtk_widget_add_css_class(new_tab_btn, "new-tab-button");
+    gtk_widget_set_tooltip_text(new_tab_btn, "New Tab");
+    gtk_widget_set_margin_start(new_tab_btn, 0);
+    g_signal_connect(new_tab_btn, "clicked", G_CALLBACK(on_new_tab), this);
+    gtk_box_append(GTK_BOX(m_tab_bar), new_tab_btn);
+}
+
 void BrowserWindow::apply_styles()
 {
     GtkCssProvider *css_provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_string(css_provider, BrowserStyles::get_css());
+
+    // Enhanced CSS with custom tab bar styling
+    std::string css = std::string(BrowserStyles::get_css()) + R"(
+        .tab-bar {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .tab-button {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            border-radius: 6px 6px 0 0;
+            padding: 2px 8px;
+            min-width: 100px;
+            min-height: 24px;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 1px 0 0;
+            transition: all 200ms;
+        }
+        
+        .tab-button:first-child {
+            margin-left: 0;
+        }
+        
+        .tab-button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        .tab-button.active {
+            background: rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+        }
+        
+        .tab-close {
+            background: transparent;
+            border: none;
+            padding: 2px;
+            margin-left: 6px;
+            min-width: 14px;
+            min-height: 14px;
+            opacity: 0.6;
+            border-radius: 3px;
+        }
+        
+        .tab-close:hover {
+            background: rgba(255, 50, 50, 0.4);
+            opacity: 1;
+        }
+        
+        .new-tab-button {
+            background: transparent;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 8px;
+            min-width: 30px;
+            margin-left: 4px;
+        }
+        
+        .new-tab-button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+    )";
+
+    gtk_css_provider_load_from_string(css_provider, css.c_str());
     gtk_style_context_add_provider_for_display(
         gdk_display_get_default(),
         GTK_STYLE_PROVIDER(css_provider),
@@ -99,12 +207,13 @@ void BrowserWindow::add_tab()
 {
     auto tab = std::make_unique<BrowserTab>();
     WebKitWebView *webview = tab->webview();
+    int tab_index = m_tabs.size();
 
     // Connect signals
     g_signal_connect(webview, "load-changed", G_CALLBACK(on_load_changed), this);
     g_signal_connect(webview, "notify::title", G_CALLBACK(on_title_changed), this);
 
-    // Create container
+    // Create container for web content
     GtkWidget *container = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_set_hexpand(container, TRUE);
     gtk_widget_set_vexpand(container, TRUE);
@@ -114,35 +223,97 @@ void BrowserWindow::add_tab()
     gtk_widget_set_vexpand(webview_widget, TRUE);
     gtk_box_append(GTK_BOX(container), webview_widget);
 
-    // Create tab label first with temporary page number
-    GtkWidget *tab_label = BrowserTabLabel::create(m_tabs.size(), this);
+    // Add to stack with unique name
+    std::string stack_name = "tab-" + std::to_string(tab_index);
+    gtk_stack_add_named(GTK_STACK(m_content_stack), container, stack_name.c_str());
 
-    // Add to notebook
-    int page_num = gtk_notebook_append_page(
-        GTK_NOTEBOOK(m_notebook),
-        container,
-        tab_label);
+    // Create custom tab button
+    GtkWidget *tab_button = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 4);
+    gtk_widget_add_css_class(tab_button, "tab-button");
 
-    // Update the close button's page number now that we know it
-    GtkWidget *close_btn = gtk_widget_get_last_child(tab_label);
-    if (close_btn)
-    {
-        g_object_set_data(G_OBJECT(close_btn), "page-num", GINT_TO_POINTER(page_num));
-    }
+    // Tab label
+    GtkWidget *label = gtk_label_new("New Tab");
+    gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_END);
+    gtk_label_set_max_width_chars(GTK_LABEL(label), 18);
+    gtk_widget_set_hexpand(label, TRUE);
+    
+    // Make label text smaller
+    PangoAttrList *attrs = pango_attr_list_new();
+    pango_attr_list_insert(attrs, pango_attr_scale_new(PANGO_SCALE_SMALL));
+    gtk_label_set_attributes(GTK_LABEL(label), attrs);
+    pango_attr_list_unref(attrs);
+    
+    gtk_box_append(GTK_BOX(tab_button), label);
 
-    gtk_notebook_set_current_page(GTK_NOTEBOOK(m_notebook), page_num);
+    // Close button
+    GtkWidget *close_btn = gtk_button_new_from_icon_name("window-close-symbolic");
+    gtk_widget_add_css_class(close_btn, "tab-close");
+    gtk_widget_set_tooltip_text(close_btn, "Close Tab");
+    g_object_set_data(G_OBJECT(close_btn), "tab-index", GINT_TO_POINTER(tab_index));
+    g_signal_connect(close_btn, "clicked", G_CALLBACK(on_close_tab), this);
+    gtk_box_append(GTK_BOX(tab_button), close_btn);
+
+    // Make the whole tab button clickable
+    GtkGesture *click = gtk_gesture_click_new();
+    g_object_set_data(G_OBJECT(click), "tab-index", GINT_TO_POINTER(tab_index));
+    g_object_set_data(G_OBJECT(tab_button), "tab-index-data", GINT_TO_POINTER(tab_index));
+    g_signal_connect(click, "released", G_CALLBACK(on_tab_clicked), this);
+    gtk_widget_add_controller(tab_button, GTK_EVENT_CONTROLLER(click));
+
+    // Store references
+    TabInfo info;
+    info.button = tab_button;
+    info.label = label;
+    info.stack_name = stack_name;
+    m_tab_info.push_back(info);
+
+    gtk_box_append(GTK_BOX(m_tab_list), tab_button);
+
+    // Switch to new tab
+    switch_to_tab(tab_index);
     tab->load_uri(BrowserConfig::DEFAULT_HOMEPAGE);
     m_tabs.push_back(std::move(tab));
 }
 
+void BrowserWindow::switch_to_tab(int index)
+{
+    if (index < 0 || index >= static_cast<int>(m_tabs.size()))
+        return;
+
+    // Remove active class from all tabs
+    for (const auto &info : m_tab_info)
+    {
+        gtk_widget_remove_css_class(info.button, "active");
+    }
+
+    // Add active class to selected tab
+    gtk_widget_add_css_class(m_tab_info[index].button, "active");
+
+    // Switch stack content
+    gtk_stack_set_visible_child_name(GTK_STACK(m_content_stack),
+                                     m_tab_info[index].stack_name.c_str());
+
+    m_current_tab_index = index;
+
+    // Update URL bar
+    auto *tab = current_tab();
+    if (tab)
+    {
+        const char *uri = webkit_web_view_get_uri(tab->webview());
+        if (uri)
+        {
+            gtk_editable_set_text(GTK_EDITABLE(m_url_entry), uri);
+        }
+    }
+}
+
 BrowserTab *BrowserWindow::current_tab()
 {
-    int page = gtk_notebook_get_current_page(GTK_NOTEBOOK(m_notebook));
-    if (page < 0 || page >= static_cast<int>(m_tabs.size()))
+    if (m_current_tab_index < 0 || m_current_tab_index >= static_cast<int>(m_tabs.size()))
     {
         return nullptr;
     }
-    return m_tabs[page].get();
+    return m_tabs[m_current_tab_index].get();
 }
 
 // Event handlers
@@ -151,15 +322,78 @@ void BrowserWindow::on_new_tab(GtkButton *, gpointer user_data)
     static_cast<BrowserWindow *>(user_data)->add_tab();
 }
 
+void BrowserWindow::on_tab_clicked(GtkGestureClick *gesture, int, double, double, gpointer user_data)
+{
+    auto *browser = static_cast<BrowserWindow *>(user_data);
+    
+    // Try to get index from gesture first, then fall back to button
+    int tab_index = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(gesture), "tab-index"));
+    
+    // If gesture doesn't have index (after tab close/reorder), get from button
+    if (tab_index == 0)
+    {
+        GtkWidget *button = gtk_event_controller_get_widget(GTK_EVENT_CONTROLLER(gesture));
+        if (button)
+        {
+            tab_index = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(button), "tab-index-data"));
+        }
+    }
+    
+    browser->switch_to_tab(tab_index);
+}
+
 void BrowserWindow::on_close_tab(GtkButton *button, gpointer user_data)
 {
     auto *browser = static_cast<BrowserWindow *>(user_data);
     if (browser->m_tabs.size() <= 1)
         return;
 
-    int page_num = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(button), "page-num"));
-    gtk_notebook_remove_page(GTK_NOTEBOOK(browser->m_notebook), page_num);
-    browser->m_tabs.erase(browser->m_tabs.begin() + page_num);
+    int tab_index = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(button), "tab-index"));
+
+    // Remove from UI
+    gtk_box_remove(GTK_BOX(browser->m_tab_list), browser->m_tab_info[tab_index].button);
+
+    // Remove from stack
+    GtkWidget *child = gtk_stack_get_child_by_name(
+        GTK_STACK(browser->m_content_stack),
+        browser->m_tab_info[tab_index].stack_name.c_str());
+    if (child)
+    {
+        gtk_stack_remove(GTK_STACK(browser->m_content_stack), child);
+    }
+
+    // Remove from vectors
+    browser->m_tabs.erase(browser->m_tabs.begin() + tab_index);
+    browser->m_tab_info.erase(browser->m_tab_info.begin() + tab_index);
+
+    // Update indices for remaining tabs - we need to recreate gesture controllers
+    for (size_t i = tab_index; i < browser->m_tab_info.size(); ++i)
+    {
+        // Store references
+        GtkWidget *tab_btn = browser->m_tab_info[i].button;
+        GtkWidget *close = gtk_widget_get_last_child(tab_btn);
+        
+        // Update close button index
+        if (close)
+        {
+            g_object_set_data(G_OBJECT(close), "tab-index", GINT_TO_POINTER(i));
+        }
+        
+        // Remove old gesture and add new one with updated index
+        // Note: We can't easily update the gesture's data after creation,
+        // so we'll store the index in the button itself for the gesture to read
+        g_object_set_data(G_OBJECT(tab_btn), "tab-index-data", GINT_TO_POINTER(i));
+    }
+
+    // Switch to adjacent tab
+    if (tab_index >= static_cast<int>(browser->m_tabs.size()))
+    {
+        browser->switch_to_tab(browser->m_tabs.size() - 1);
+    }
+    else
+    {
+        browser->switch_to_tab(tab_index);
+    }
 }
 
 void BrowserWindow::on_back(GtkButton *, gpointer user_data)
@@ -241,7 +475,7 @@ void BrowserWindow::on_load_changed(WebKitWebView *webview, WebKitLoadEvent load
 
     auto *self = static_cast<BrowserWindow *>(user_data);
     const char *uri = webkit_web_view_get_uri(webview);
-    if (uri)
+    if (uri && self->current_tab() && self->current_tab()->webview() == webview)
     {
         gtk_editable_set_text(GTK_EDITABLE(self->m_url_entry), uri);
     }
@@ -254,16 +488,17 @@ void BrowserWindow::on_title_changed(WebKitWebView *webview, GParamSpec *, gpoin
     if (!title)
         return;
 
-    // Update window title with browser name
-    std::string window_title = std::string(title) + " - " +
-                               BrowserConfig::BROWSER_NAME;
-    gtk_window_set_title(GTK_WINDOW(self->m_window), window_title.c_str());
-
-    // Update tab label
-    int current_page = gtk_notebook_get_current_page(GTK_NOTEBOOK(self->m_notebook));
-    GtkWidget *tab_label = gtk_notebook_get_tab_label(
-        GTK_NOTEBOOK(self->m_notebook),
-        gtk_notebook_get_nth_page(GTK_NOTEBOOK(self->m_notebook), current_page));
-
-    BrowserTabLabel::update_title(tab_label, title);
+    // Find which tab this webview belongs to
+    for (size_t i = 0; i < self->m_tabs.size(); ++i)
+    {
+        if (self->m_tabs[i]->webview() == webview)
+        {
+            // Update tab label
+            gtk_label_set_text(GTK_LABEL(self->m_tab_info[i].label), title);
+            
+            // Don't update window title - we want to keep the header clean
+            // The window title is only used for the taskbar/window list
+            break;
+        }
+    }
 }

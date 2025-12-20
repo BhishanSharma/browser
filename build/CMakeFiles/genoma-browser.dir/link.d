@@ -80,7 +80,6 @@ genoma-browser: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgmodule-2.0.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpangocairo-1.0.so \
-  /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpango-1.0.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libharfbuzz.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libcairo.so \
   /lib/x86_64-linux-gnu/libharfbuzz-subset.so.0 \
@@ -108,6 +107,7 @@ genoma-browser: \
   /lib/x86_64-linux-gnu/libXrandr.so.2 \
   /lib/x86_64-linux-gnu/libXinerama.so.1 \
   /lib/x86_64-linux-gnu/libcairo-script-interpreter.so.2 \
+  /lib/x86_64-linux-gnu/libthai.so.0 \
   /lib/x86_64-linux-gnu/libz.so.1 \
   /lib/x86_64-linux-gnu/libmount.so.1 \
   /lib/x86_64-linux-gnu/libselinux.so.1 \
@@ -117,7 +117,6 @@ genoma-browser: \
   /lib/x86_64-linux-gnu/libfreetype.so.6 \
   /lib/x86_64-linux-gnu/libwebpmux.so.3 \
   /lib/x86_64-linux-gnu/libexpat.so.1 \
-  /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libjavascriptcoregtk-6.0.so \
   /lib/x86_64-linux-gnu/libicudata.so.76 \
   /lib/x86_64-linux-gnu/libicui18n.so.76 \
   /lib/x86_64-linux-gnu/libsystemd.so.0 \
@@ -154,7 +153,6 @@ genoma-browser: \
   /lib/x86_64-linux-gnu/libgbm.so.1 \
   /lib/x86_64-linux-gnu/libdrm.so.2 \
   /lib64/ld-linux-x86-64.so.2 \
-  /lib/x86_64-linux-gnu/libthai.so.0 \
   /lib/x86_64-linux-gnu/libgraphite2.so.3 \
   /lib/x86_64-linux-gnu/libXrender.so.1 \
   /lib/x86_64-linux-gnu/libxcb.so.1 \
@@ -167,6 +165,7 @@ genoma-browser: \
   /lib/x86_64-linux-gnu/libjbig.so.0 \
   /lib/x86_64-linux-gnu/libdeflate.so.0 \
   /lib/x86_64-linux-gnu/liblzo2.so.2 \
+  /lib/x86_64-linux-gnu/libdatrie.so.1 \
   /lib/x86_64-linux-gnu/libblkid.so.1 \
   /lib/x86_64-linux-gnu/libbz2.so.1.0 \
   /lib/x86_64-linux-gnu/libbrotlidec.so.1 \
@@ -186,7 +185,6 @@ genoma-browser: \
   /lib/x86_64-linux-gnu/libgssapi_krb5.so.2 \
   /lib/x86_64-linux-gnu/libnghttp2.so.14 \
   /lib/x86_64-linux-gnu/libevdev.so.2 \
-  /lib/x86_64-linux-gnu/libdatrie.so.1 \
   /lib/x86_64-linux-gnu/libXau.so.6 \
   /lib/x86_64-linux-gnu/libXdmcp.so.6 \
   /lib/x86_64-linux-gnu/libbrotlicommon.so.1 \
@@ -364,8 +362,6 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpangocairo-1.0.so:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libpango-1.0.so:
-
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libharfbuzz.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libcairo.so:
@@ -420,6 +416,8 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 
 /lib/x86_64-linux-gnu/libcairo-script-interpreter.so.2:
 
+/lib/x86_64-linux-gnu/libthai.so.0:
+
 /lib/x86_64-linux-gnu/libz.so.1:
 
 /lib/x86_64-linux-gnu/libmount.so.1:
@@ -437,8 +435,6 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 /lib/x86_64-linux-gnu/libwebpmux.so.3:
 
 /lib/x86_64-linux-gnu/libexpat.so.1:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libjavascriptcoregtk-6.0.so:
 
 /lib/x86_64-linux-gnu/libicudata.so.76:
 
@@ -512,8 +508,6 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 
 /lib64/ld-linux-x86-64.so.2:
 
-/lib/x86_64-linux-gnu/libthai.so.0:
-
 /lib/x86_64-linux-gnu/libgraphite2.so.3:
 
 /lib/x86_64-linux-gnu/libXrender.so.1:
@@ -537,6 +531,8 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 /lib/x86_64-linux-gnu/libdeflate.so.0:
 
 /lib/x86_64-linux-gnu/liblzo2.so.2:
+
+/lib/x86_64-linux-gnu/libdatrie.so.1:
 
 /lib/x86_64-linux-gnu/libblkid.so.1:
 
@@ -575,8 +571,6 @@ CMakeFiles/genoma-browser.dir/src/utils/url_utils.cpp.o:
 /lib/x86_64-linux-gnu/libnghttp2.so.14:
 
 /lib/x86_64-linux-gnu/libevdev.so.2:
-
-/lib/x86_64-linux-gnu/libdatrie.so.1:
 
 /lib/x86_64-linux-gnu/libXau.so.6:
 
